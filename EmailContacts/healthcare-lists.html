@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MS Data ProDocs PVT offers healthcare-specific email lists to target professionals like physicians, nurses, hospital administrators, and medical directors, enhancing your B2B marketing campaigns.">
+    <meta name="keywords" content="healthcare email lists, healthcare professionals, physicians, nurses, hospital administrators, B2B marketing">
+    <meta name="author" content="MS Data ProDocs PVT">
+    <meta name="title" content="Healthcare Email Lists - MS Data ProDocs PVT">
+    <title>Healthcare Email Lists - MS Data ProDocs PVT</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Animate.css -->
+    <link rel="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet"/>
+
+    <!-- GSAP for Animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.6/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <!-- Custom CSS for Navbar -->
+    <link rel="https://raw.githubusercontent.com/MedicalDataSyncCorp/public/main/CSS/NavBar.css" rel="stylesheet" href="../navbar.css">
+
+    <!-- Custom CSS for Footer -->
+    <link rel="https://raw.githubusercontent.com/MedicalDataSyncCorp/public/main/CSS/footer.css" rel="stylesheet" href="../footer.css">
+
+ 
+         <!-- Custom CSS for Navbar -->
+    <link rel="stylesheet" href="../navbar.css">
+
+    <!-- Custom CSS for Footer -->
+    <link rel="stylesheet" href="../footer.css">
+
+    <!-- Inline CSS for Content -->
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            overflow-x: hidden;
+            background-color: #f8f9fa; /* Subpage background */
+        }
+
+        /* Active Nav Link */
+        .active {
+            color: #f8c146 !important;
+        }
+
+        /* Intro Section */
+        .intro-section {
+            background: linear-gradient(45deg, #1a3c34, #30b8b1);
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .intro-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://via.placeholder.com/1920x1080?text=Healthcare+Email+Lists+Background') no-repeat center/cover;
+            opacity: 0.15;
+            z-index: 0;
+        }
+
+        .intro-section .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .intro-section h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 5px rgba(0,0,0,0.3);
+        }
+
+        .intro-section p {
+            font-size: 1.3rem;
+            max-width: 800px;
+            margin: 0 auto;
+            opacity: 0.9;
+        }
+
+        /* Overview Section */
+        .overview-section {
+            padding: 80px 0;
+            background-color: #ffffff;
+        }
+
+        .overview-section h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #1a3c34;
+            margin-bottom: 20px;
+        }
+
+        .overview-section p {
+            font-size: 1.1rem;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .overview-section img {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        /* Healthcare Lists Section */
+        .healthcare-listings-section {
+            padding: 80px 0;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+
+        .healthcare-listings-section h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #1a3c34;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .healthcare-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .healthcare-list li::before {
+            content: '★';
+            color: #f8c146;
+            margin-right: 10px;
+        }
+
+        .healthcare-list li {
+            font-size: 1rem;
+            margin-bottom: 10px;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 992px) {
+            .intro-section {
+                padding: 80px 0;
+            }
+
+            .intro-section h1 {
+                font-size: 2.8rem;
+            }
+
+            .intro-section p {
+                font-size: 1.1rem;
+            }
+
+            .overview-section, .healthcare-list-section {
+                padding: 60px 0;
+            }
+
+            .overview-section h2, .healthcare-listings-section h2 {
+                font-size: 2.2rem;
+            }
+
+            .overview-section img {
+                height: 250px;
+            }
+
+            .healthcare-list li {
+                font-size: 0.95rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .intro-section {
+                padding: 60px 0;
+            }
+
+            .intro-section h1 {
+                font-size: 2rem;
+            }
+
+            .intro-section p {
+                font-size: 1rem;
+            }
+
+            .overview-section, .healthcare-listings-section {
+                padding: 40px 0;
+            }
+
+            .overview-section h2,
+.healthcare-listings-section h2 {
+                font-size: 1.8rem;
+            }
+
+            .overview-section img {
+                height: 200px;
+                margin-bottom: 20px;
+            }
+
+            .healthcare-list li {
+                font-size: 0.9rem;
+                margin-bottom: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../index.html">MS Data ProDocs PVT</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbar-toggle" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../AboutUs.html">About Us</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="mailingLists" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Mailing Lists
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="mailingLists">
+                            <li><a class="dropdown-item" href="../MailingList/agriculture-industry.html">Agriculture Industry Lists</a></li>
+                            <li><a class="dropdown-item" href="../MailingList/it-industry.html">IT Industry Lists</a></li>
+                            <li><a class="dropdown-item" href="../MailingList/mining-industry.html">Mining Industry Lists</a></li>
+                            <li><a class="dropdown-item" href="../MailingList/construction-industry.html">Construction Industry Lists</a></li>
+                            <li><a class="dropdown-item" href="../MailingList/manufacturing-industry.html">Manufacturing Industry Lists</a></li>
+                            <li><a class="dropdown-item" href="../MailingList/transportation-industry.html">Transportation Industry Lists</a></li>
+                            <li><a class="dropdown-item" href="../MailingList/wholesale-trade-industry.html">Wholesale Trade Industry Lists</a></li>
+                            <li><a class="dropdown-item" href="../MailingList/retail-industry.html">Retail Industry Lists</a></li>
+                            <li><a class="dropdown-item" href="../MailingList/financial-services.html">Financial Services Lists</a></li>
+                            <li><a class="dropdown-item" href="../MailingList/business-services.html">Business Services Industry Lists</a></li>
+                            <li><a class="dropdown-item" href="../MailingList/textile-apparel-industry.html">Textile & Apparel Industry Lists</a></li>
+                            <li><a class="dropdown-item" href="../MailingList/electronics-industry.html">Electronics Industry Lists</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="emailContacts" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Email Contacts
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="emailContacts">
+                            <li><a class="dropdown-item" href="by-industry.html">By Industry</a></li>
+                            <li><a class="dropdown-item" href="by-job-title.html">By Job Title</a></li>
+                            <li><a class="dropdown-item" href="technology-lists.html">Technology Lists</a></li>
+                            <li><a class="dropdown-item active" href="healthcare-lists.html">Healthcare Email Lists</a></li>
+                            <li><a class="dropdown-item" href="executives-email.html">Executives Email List</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dataServices" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Data Services
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="dataServices">
+                            <li><a class="dropdown-item" href="../DataServices/email-appending.html">Email Appending</a></li>
+                            <li><a class="dropdown-item" href="../DataServices/email-validation.html">Email Validation</a></li>
+                            <li><a class="dropdown-item" href="../DataServices/data-cleansing.html">Data Cleansing</a></li>
+                            <li><a class="dropdown-item" href="../DataServices/data-enhancement.html">Data Enhancement</a></li>
+                            <li><a class="dropdown-item" href="../DataServices/lead-management.html">Lead Management</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../buyer-supplier.html">Buyer-Supplier</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../contact.html">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Intro Section -->
+    <section class="intro-section">
+        <div class="container">
+            <h1 data-animate="fadeInDown">Healthcare Email Lists</h1>
+            <p data-animate="fadeInUp" data-delay="0.2">Target healthcare professionals like physicians, nurses, hospital administrators, and medical directors with our precise email lists to drive B2B marketing success.</p>
+        </div>
+    </section>
+
+    <!-- Overview Section -->
+    <section class="overview-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6" data-animate="fadeInLeft">
+                    <h2>Connect with Healthcare Decision-Makers</h2>
+                    <p>Our healthcare email lists provide access to top professionals in the healthcare industry, from physicians and nurses to hospital administrators and medical directors. These decision-makers, working in doctor’s practices, hospitals, managed care organizations, and extended care facilities, have purchasing intent for healthcare products and services.</p>
+                    <p>Reach professionals interested in management topics, technology, business growth, and more. Our targeted lists help you engage with the right audience, boosting lead generation and ROI for your marketing campaigns.</p>
+                </div>
+                <div class="col-md-6" data-animate="fadeInRight">
+                    <img src="https://static.wixstatic.com/media/df5183_4951d200bb72433397e29a8e14cdf31e~mv2.jpg/v1/fill/w_1512,h_777,al_c,q_85,enc_avif,quality_auto/df5183_4951d200bb72433397e29a8e14cdf31e~mv2.jpg" alt="Healthcare Email Lists" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Healthcare Lists Section -->
+    <section class="healthcare-listings-section">
+        <div class="container">
+            <h2 data-animate="fadeIn">Explore Our Healthcare Email Lists</h2>
+            <div class="row">
+                <div class="col-6">
+                    <ul class="healthcare-list">
+                        <li>Acupuncturists Email List</li>
+                        <li>ADA - Dentists Email List</li>
+                        <li>Addiction Counselors Email List</li>
+                        <li>Aerospace Medicine Physicians Email List</li>
+                        <li>AIDS Information and Testing Email List</li>
+                        <li>Ailments Mailing List</li>
+                        <li>Allergists Email List</li>
+                        <li>AMA Physicians Email List</li>
+                        <li>Ambulance Services Email and Mailing List</li>
+                        <li>Anatomical & Clinical Pathologist Email List</li>
+                        <li>Anesthesiologists Email List</li>
+                        <li>Asthma Specialist Email List</li>
+                        <li>Audiologists Email List</li>
+                        <li>Bariatricians Mailing List</li>
+                        <li>Biofeedback Therapists Mailing List</li>
+                        <li>Blood Bank & Centers Email List</li>
+                        <li>Cardiologists Email List</li>
+                        <li>Chiropractors Mailing List</li>
+                        <li>Clinical Lab Scientists Email List</li>
+                        <li>Clinical Trial Physicians Email List</li>
+                        <li>Clinics Mailing List</li>
+                        <li>Colorectal Surgeons Email List</li>
+                        <li>Convalescent Homes Email List</li>
+                        <li>Cosmetologist Email List</li>
+                        <li>Critical Care Medicine Physician Email List</li>
+                        <li>Dentists Email List</li>
+                        <li>Dermatologist Mailing List</li>
+                        <li>Diabetes Specialist Email List</li>
+                        <li>Diagnostic Radiologists Email List</li>
+                        <li>Dieticians Mailing List</li>
+                        <li>Doctors at Home Address Mailing List</li>
+                        <li>Emergency Medicine Physicians Email List</li>
+                        <li>Endocrinology Physicians Email List</li>
+                        <li>ENT Specialist Email List</li>
+                        <li>Epidemiologists Mailing List</li>
+                        <li>Family Practice Physicians Email List</li>
+                        <li>Family Practitioners Email List</li>
+                        <li>Food Services Director Email List</li>
+                        <li>Gastroenterologist Email List</li>
+                        <li>Geriatricians Email List</li>
+                        <li>Hand Surgery Email List</li>
+                        <li>Health & Safety Directors Email List</li>
+                        <li>Hematologists Email List</li>
+                        <li>HIPAA Compliance Director Email List</li>
+                        <li>Hospital Mailing List</li>
+                        <li>Infection Control Directors Email List</li>
+                        <li>Kidney Dialysis & Transplantation Email List</li>
+                        <li>Urologist Email List</li>
+                        <li>Vascular Surgeons Email List</li>
+                        <li>Veterinarians Email List</li>
+                        <li>Vitreoretinal Surgeons Mailing List</li>
+                        <li>Women Health Services Email List</li>
+                        <li>X-ray Laboratories Mailing List</li>
+                    </ul>
+                </div>
+                <div class="col-6">
+                    <ul class="healthcare-list">
+                        <li>Mammographers Mailing List</li>
+                        <li>Marriage and Family Therapists Email List</li>
+                        <li>Massage Therapists Email List</li>
+                        <li>Neurologist Mailing List</li>
+                        <li>Neurosurgeons Email List</li>
+                        <li>Nuclear Medicine Email List</li>
+                        <li>Nurses Mailing List</li>
+                        <li>Nutritionist Mailing List</li>
+                        <li>Obstetricians/Gynecologists Email List</li>
+                        <li>Occupational Therapists Email List</li>
+                        <li>Office Based Physicians Email List</li>
+                        <li>Oncology Nurses Email List</li>
+                        <li>Ophthalmologist Mailing List</li>
+                        <li>Opticians Email List</li>
+                        <li>Oral and Maxillofacial Surgeons Email List</li>
+                        <li>Orthodontist Email List</li>
+                        <li>Orthopedic Surgeons Email List</li>
+                        <li>Osteopathic Doctors Email List</li>
+                        <li>Otolaryngologist Email List</li>
+                        <li>Pain Management Email List</li>
+                        <li>Paramedics and EMTs Mailing List</li>
+                        <li>Pathologists Email List</li>
+                        <li>Pediatricians Email List</li>
+                        <li>Perfusionist Email List</li>
+                        <li>Pharmacists Email List</li>
+                        <li>Phlebotomists Mailing List</li>
+                        <li>Physical Fitness Facilities Email List</li>
+                        <li>Physical Rehabilitation Director Email List</li>
+                        <li>Physical Therapy Director Email List</li>
+                        <li>Physiotherapist Email List</li>
+                        <li>Plastic Surgeons Email List</li>
+                        <li>Podiatrists Email List</li>
+                        <li>Prosthodontists Email List</li>
+                        <li>Psychiatric Services Email List</li>
+                        <li>Psychiatrists Email List</li>
+                        <li>Pulmonologist Mailing List</li>
+                        <li>Radiologist Mailing List</li>
+                        <li>Reflexologists Email List</li>
+                        <li>Rehabilitation Practitioner Email List</li>
+                        <li>Respiratory Therapists Email List</li>
+                        <li>Rheumatologists Email List</li>
+                        <li>Security Director Email List</li>
+                        <li>Sleep Lab Director Email List</li>
+                        <li>Social Service Director Email List</li>
+                        <li>Sports Medicine & Injuries Email List</li>
+                        <li>Surgeons Email List</li>
+                        <li>Surgery Services Director Email List</li>
+                        <li>Surgical Specialists Email List</li>
+                        <li>Thoracic Surgeons Email List</li>
+                        <li>Toxicologist Mailing List</li>
+                        <li>Trauma Surgeons Email List</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 mb-4">
+                    <h5 style="text-decoration: underline; color: #ffd000;">Address</h5>
+                    <p>MS Data ProDocs PVT,<br>1002 South Center Street #4296,<br>North America, MT 59230</p>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5 style="text-decoration: underline; color: #ffd000;">Industry Mailing Lists</h5>
+                    <ul class="list-unstyled">
+                        <li>Construction Industry Lists</li>
+                        <li>Manufacturing Industry Lists</li>
+                        <li>Mining Industry Lists</li>
+                        <li>Transportation Industry Lists</li>
+                        <li>Oil and Gas Mailing List</li>
+                        <li>Banking and Finance Email List</li>
+                        <li>Retail Industry Lists</li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5 style="text-decoration: underline; color: #ffd000;">Healthcare Lists</h5>
+                    <ul class="list-unstyled">
+                        <li>Medical Mailing List</li>
+                        <li>Physician Email List</li>
+                        <li>Dentist Email List</li>
+                        <li>Doctors Email List</li>
+                        <li>Physical Therapist Email List</li>
+                        <li>Practitioner</li>
+                        <li>Nurse Practitioner</li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5 style="text-decoration: underline; color: #ffd000;">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="../AboutUs.html">About Us</a></li>
+                        <li><a href="../privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="../terms-of-use.html">Terms of Use</a></li>
+                    </ul>
+                    <h5>Contact Us</h5>
+                    <p>Phone: +1 406-780-7401</p>
+                    <p>Email: info@msdataprodocs.org</p>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <p style="color: #30b8b1;">© 2025 MS Data ProDocs PVT. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+
+    <!-- Custom JS for Navbar Animation -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const navLinks = document.querySelectorAll('.nav-link, .dropdown-item');
+            navLinks.forEach(link => {
+                link.addEventListener('mouseover', function () {
+                    this.classList.add('animate__pulse');
+                });
+                link.addEventListener('animationend', function () {
+                    this.classList.remove('animate__pulse');
+                });
+            });
+        });
+    </script>
+
+    <!-- GSAP Animations -->
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Intro Section Animations
+        gsap.from(".intro-section h1", {
+            opacity: 0,
+            y: -50,
+            duration: 1,
+            ease: "power3.out",
+            scrollTrigger: {
+                trigger: ".intro-section",
+                start: "top 80%"
+            }
+        });
+
+        gsap.from(".intro-section p", {
+            opacity: 0,
+            y: 50,
+            duration: 1,
+            delay: 0.3,
+            ease: "power3.out",
+            scrollTrigger: {
+                trigger: ".intro-section",
+                start: "top 80%"
+            }
+        });
+
+        // Overview Section Animations
+        gsap.from(".overview-section h2", {
+            opacity: 0,
+            x: -50,
+            duration: 0.8,
+            ease: "power3.out",
+            scrollTrigger: {
+                trigger: ".overview-section",
+                start: "top 80%"
+            }
+        });
+
+        gsap.from(".overview-section p", {
+            opacity: 0,
+            y: 50,
+            duration: 0.8,
+            delay: 0.2,
+            ease: "power3.out",
+            scrollTrigger: {
+                trigger: ".overview-section",
+                start: "top 80%"
+            }
+        });
+
+        gsap.from(".overview-section img", {
+            opacity: 0,
+            x: 50,
+            duration: 0.8,
+            delay: 0.2,
+            ease: "power3.out",
+            scrollTrigger: {
+                trigger: ".overview-section",
+                start: "top 80%"
+            }
+        });
+
+        // Healthcare Lists Section Animations
+        gsap.from(".healthcare-listings-section h2", {
+            opacity: 0,
+            y: -30,
+            duration: 0.8,
+            ease: "power3.out",
+            scrollTrigger: {
+                trigger: ".healthcare-listings-section",
+                start: "top 80%"
+            }
+        });
+
+        gsap.from(".healthcare-list", {
+            opacity: 0,
+            y: 50,
+            duration: 0.8,
+            ease: "power3.out",
+            scrollTrigger: {
+                trigger: ".healthcare-list",
+                start: "top 80%"
+            }
+        });
+    </script>
+</body>
+</html>

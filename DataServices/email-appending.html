@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Enhance your database with MS Data ProDocs PVT's email appending services, offering high match rates and permission-based email addresses for multi-channel marketing.">
+    <meta name="keywords" content="email appending, data services, B2B marketing, permission-based emails, multi-channel marketing">
+    <meta name="author" content="MS Data ProDocs PVT">
+    <title>Email Appending - MS Data ProDocs PVT</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <!-- GSAP for Animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <!-- Custom CSS for Navbar -->
+    <link rel="stylesheet" href="../navbar.css">
+
+    <!-- Custom CSS for Footer -->
+    <link rel="stylesheet" href="../footer.css">
+
+    <!-- Inline CSS for Content -->
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            overflow-x: hidden;
+            background-color: #f8f9fa; /* Different background for subpages */
+        }
+
+        /* Active Nav Link */
+        .active {
+            color: #f8c146 !important;
+        }
+
+        /* Intro Section */
+        .intro-section {
+            background: linear-gradient(135deg, #1a3c34, #30b8b1);
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .intro-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://via.placeholder.com/1920x1080?text=Email+Appending+Background') no-repeat center/cover;
+            opacity: 0.15;
+            z-index: 0;
+        }
+
+        .intro-section .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .intro-section h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        .intro-section p {
+            font-size: 1.3rem;
+            max-width: 800px;
+            margin: 0 auto;
+            opacity: 0.9;
+        }
+
+        /* Process Section */
+        .process-section {
+            padding: 80px 0;
+            background-color: #ffffff;
+        }
+
+        .process-section h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #1a3c34;
+            margin-bottom: 20px;
+        }
+
+        .process-section p {
+            font-size: 1.1rem;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .process-section img {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Benefits Section */
+        .benefits-section {
+            padding: 80px 0;
+            background-color: #f8f9fa;
+        }
+
+        .benefits-section h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #1a3c34;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .benefits-section .benefit-card {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .benefits-section .benefit-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .benefits-section .benefit-card h4 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #1a3c34;
+            margin-bottom: 10px;
+        }
+
+        .benefits-section .benefit-card p {
+            font-size: 1rem;
+            color: #555;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 992px) {
+            .intro-section {
+                padding: 80px 0;
+            }
+
+            .intro-section h1 {
+                font-size: 2.8rem;
+            }
+
+            .intro-section p {
+                font-size: 1.1rem;
+            }
+
+            .process-section, .benefits-section {
+                padding: 60px 0;
+            }
+
+            .process-section h2, .benefits-section h2 {
+                font-size: 2.2rem;
+            }
+
+            .process-section img {
+                height: 250px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .intro-section {
+                padding: 60px 0;
+            }
+
+            .intro-section h1 {
+                font-size: 2rem;
+            }
+
+            .intro-section p {
+                font-size: 1rem;
+            }
+
+            .process-section, .benefits-section {
+                padding: 40px 0;
+            }
+
+            .process-section h2, .benefits-section h2 {
+                font-size: 1.8rem;
+            }
+
+            .process-section img {
+                height: 200px;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar (Updated as Provided, with active class for Data Services and Email Appending) -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand animate__animated animate__pulse" href="index.html">MS Data ProDocs PVT</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link animate__animated" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link animate__animated" href="../AboutUs.html">About Us</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle animate__animated" href="#" id="mailingLists" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Mailing Lists
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="mailingLists">
+                            <li><a class="dropdown-item animate__animated" href="../MailingList/agriculture-industry.html">Agriculture Industry Lists</a></li>
+                            <li><a class="dropdown-item animate__animated" href="../MailingList/it-industry.html">IT Industry Lists</a></li>
+                            <li><a class="dropdown-item animate__animated" href="../MailingList/mining-industry.html">Mining Industry Lists</a></li>
+                            <li><a class="dropdown-item animate__animated" href="../MailingList/construction-industry.html">Construction Industry Lists</a></li>
+                            <li><a class="dropdown-item animate__animated" href="../MailingList/manufacturing-industry.html">Manufacturing Industry Lists</a></li>
+                            <li><a class="dropdown-item animate__animated" href="../MailingList/transportation-industry.html">Transportation Industry Lists</a></li>
+                            <li><a class="dropdown-item animate__animated" href="../MailingList/wholesale-trade-industry.html">Wholesale Trade Industry Lists</a></li>
+                            <li><a class="dropdown-item animate__animated" href="../MailingList/retail-industry.html">Retail Industry Lists</a></li>
+                            <li><a class="dropdown-item animate__animated" href="../MailingList/financial-services.html">Financial Services Lists</a></li>
+                            <li><a class="dropdown-item animate__animated" href="../MailingList/business-services.html">Business Services Industry Lists</a></li>
+                            <li><a class="dropdown-item animate__animated" href="../MailingList/textile-apparel-industry.html">Textile & Apparel Industry Lists</a></li>
+                            <li><a class="dropdown-item animate__animated" href="../MailingList/electronics-industry.html">Electronics Industry Lists</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle animate__animated" href="#" id="emailContacts" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Email Contacts
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="emailContacts">
+                            <li><a class="dropdown-item animate__animated" href="../EmailContacts/by-industry.html">By Industry</a></li>
+                            <li><a class="dropdown-item animate__animated" href="../EmailContacts/by-job-title.html">By Job Title</a></li>
+                            <li><a class="dropdown-item animate__animated" href="../EmailContacts/technology-lists.html">Technology Lists</a></li>
+                            <li><a class="dropdown-item animate__animated" href="../EmailContacts/healthcare-lists.html">Healthcare Lists</a></li>
+                            <li><a class="dropdown-item animate__animated" href="../EmailContacts/executives-email.html">Executives Email List</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle animate__animated active" href="#" id="dataServices" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Data Services
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="dataServices">
+                            <li><a class="dropdown-item animate__animated active" href="email-appending.html">Email Appending</a></li>
+                            <li><a class="dropdown-item animate__animated" href="email-validation.html">Email Validation</a></li>
+                            <li><a class="dropdown-item animate__animated" href="data-cleansing.html">Data Cleansing</a></li>
+                            <li><a class="dropdown-item animate__animated" href="data-enhancement.html">Data Enhancement</a></li>
+                            <li><a class="dropdown-item animate__animated" href="lead-management.html">Lead Management</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link animate__animated" href="../buyer-supplier.html">Buyer-Supplier</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link animate__animated" href="../contact.html">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Intro Section -->
+    <section class="intro-section">
+        <div class="container">
+            <h1 data-animate="fadeInDown">Email Appending Services</h1>
+            <p data-animate="fadeInUp" data-delay="0.2">Enhance your database with permission-based email addresses to boost your multi-channel marketing strategies.</p>
+        </div>
+    </section>
+
+    <!-- Process Section (Content Left, Image Right) -->
+    <section class="process-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6" data-animate="fadeInLeft">
+                    <h2>Our Email Appending Process</h2>
+                    <p>Your file is matched against our permission-based email databases, ensuring the email address corresponds to the contact listed in your database, not a random employee.</p>
+                    <p>We also offer a domain pattern matching process, identifying the company’s email domain and naming convention (e.g., firstname.lastname@ or firstname@) using reference databases to generate accurate email addresses.</p>
+                    <p>Once processing is complete, a welcome email is sent to your business customers, introducing your online communications and offering an opt-out option.</p>
+                    <p>After the program, we return the enhanced file, ready for you to leverage in multi-channel marketing strategies.</p>
+                </div>
+                <div class="col-md-6" data-animate="fadeInRight">
+                    <img src="https://cdn.prod.website-files.com/647462e80cfc7c590371357c/66c728b246959417d1daaaf8_66c728a4a59a229612a8c42a_Article%25205%2520-%2520Image%252036.png" alt="Email Appending Process" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits-section">
+        <div class="container">
+            <h2 data-animate="fadeIn">Benefits of Our Email Appending</h2>
+            <div class="row">
+                <div class="col-md-4" data-animate="fadeInUp" data-delay="0.2">
+                    <div class="benefit-card">
+                        <h4>100% Opt-In Emails</h4>
+                        <p>All emails are permission-based, ensuring compliance and trust with your audience.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-animate="fadeInUp" data-delay="0.3">
+                    <div class="benefit-card">
+                        <h4>High Match Rates</h4>
+                        <p>Achieve match rates from 35% to over 80% for accurate email appending.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-animate="fadeInUp" data-delay="0.4">
+                    <div class="benefit-card">
+                        <h4>Pay for Success</h4>
+                        <p>Only pay for successfully appended, deliverable email addresses that remain opted-in.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-animate="fadeInUp" data-delay="0.5">
+                    <div class="benefit-card">
+                        <h4>In-House Quality Control</h4>
+                        <p>We perform CASS standardization and customer matching internally for precision.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-animate="fadeInUp" data-delay="0.6">
+                    <div class="benefit-card">
+                        <h4>No Middleman</h4>
+                        <p>Direct email append matching using our in-house database for efficiency.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-animate="fadeInUp" data-delay="0.7">
+                    <div class="benefit-card">
+                        <h4>5-Day Deliverability Guarantee</h4>
+                        <p>We ensure email deliverability with a 5-day guarantee.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-animate="fadeInUp" data-delay="0.8">
+                    <div class="benefit-card">
+                        <h4>Fast Turnaround</h4>
+                        <p>Receive your match report within 48 hours for quick results.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-animate="fadeInUp" data-delay="0.9">
+                    <div class="benefit-card">
+                        <h4>Free Match Test</h4>
+                        <p>Test our service with no obligation to see potential results.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (Unchanged) -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 mb-4">
+                    <h5 style="text-decoration: underline; color: #ffd000;">Address</h5>
+                    <p>MS Data ProDocs PVT,<br>1002 South Center Street #4296,<br>North America, MT 59230</p>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5 style="text-decoration: underline; color: #ffd000;">Industry Mailing Lists</h5>
+                    <ul class="list-unstyled">
+                        <li>Construction Industry Lists</li>
+                        <li>Manufacturing Industry Lists</li>
+                        <li>Mining Industry Lists</li>
+                        <li>Transportation Industry Lists</li>
+                        <li>Oil and Gas Mailing List</li>
+                        <li>Banking and Finance Email List</li>
+                        <li>Retail Industry Lists</li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5 style="text-decoration: underline; color: #ffd000;">Healthcare Lists</h5>
+                    <ul class="list-unstyled">
+                        <li>Medical Mailing List</li>
+                        <li>Physician Email List</li>
+                        <li>Dentist Email List</li>
+                        <li>Doctors Email List</li>
+                        <li>Physical Therapist Email List</li>
+                        <li>Practitioner</li>
+                        <li>Nurse Practitioner</li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5 style="text-decoration: underline; color: #ffd000;">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="../AboutUs.html">About Us</a></li>
+                        <li><a href="../privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="../terms-of-use.html">Terms of Use</a></li>
+                    </ul>
+                    <h5>Contact Us</h5>
+                    <p>Phone: +1 406-780-7401</p>
+                    <p>Email: info@msdataprodocs.org</p>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <p style="color: #30b8b1;">© 2025 MS Data ProDocs PVT. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+
+    <!-- Custom JS for Navbar Animation -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const navLinks = document.querySelectorAll('.nav-link, .dropdown-item');
+            navLinks.forEach(link => {
+                link.addEventListener('mouseover', function () {
+                    this.classList.add('animate__pulse');
+                });
+                link.addEventListener('animationend', function () {
+                    this.classList.remove('animate__pulse');
+                });
+            });
+        });
+    </script>
+
+    <!-- GSAP Animations -->
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Intro Section Animations
+        gsap.from(".intro-section h1", {
+            opacity: 0,
+            y: -50,
+            duration: 1,
+            ease: "power3.out",
+            scrollTrigger: {
+                trigger: ".intro-section",
+                start: "top 80%"
+            }
+        });
+
+        gsap.from(".intro-section p", {
+            opacity: 0,
+            y: 50,
+            duration: 1,
+            delay: 0.3,
+            ease: "power3.out",
+            scrollTrigger: {
+                trigger: ".intro-section",
+                start: "top 80%"
+            }
+        });
+
+        // Process Section Animations
+        gsap.from(".process-section h2", {
+            opacity: 0,
+            x: -50,
+            duration: 0.8,
+            ease: "power3.out",
+            scrollTrigger: {
+                trigger: ".process-section",
+                start: "top 80%"
+            }
+        });
+
+        gsap.from(".process-section p", {
+            opacity: 0,
+            y: 50,
+            duration: 0.8,
+            delay: 0.2,
+            ease: "power3.out",
+            scrollTrigger: {
+                trigger: ".process-section",
+                start: "top 80%"
+            }
+        });
+
+        gsap.from(".process-section img", {
+            opacity: 0,
+            x: 50,
+            duration: 0.8,
+            delay: 0.2,
+            ease: "power3.out",
+            scrollTrigger: {
+                trigger: ".process-section",
+                start: "top 80%"
+            }
+        });
+
+        // Benefits Section Animations
+        gsap.from(".benefits-section h2", {
+            opacity: 0,
+            y: -30,
+            duration: 0.8,
+            ease: "power3.out",
+            scrollTrigger: {
+                trigger: ".benefits-section",
+                start: "top 80%"
+            }
+        });
+
+        gsap.from(".benefit-card", {
+            opacity: 0,
+            y: 50,
+            duration: 0.8,
+            stagger: 0.1,
+            ease: "power3.out",
+            scrollTrigger: {
+                trigger: ".benefits-section",
+                start: "top 80%"
+            }
+        });
+    </script>
+</body>
+</html>

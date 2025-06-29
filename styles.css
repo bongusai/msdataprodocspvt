@@ -1,0 +1,66 @@
+
+/* Navbar Styles */
+.navbar {
+    background-color: #ffffff !important; /* White background */
+    border-bottom: 2px solid #000000; /* Black border */
+    padding: 15px 0;
+    transition: all 0.3s ease;
+}
+
+.navbar-brand {
+    color: #000000 !important; /* Black text */
+    font-size: 1.8rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.navbar-brand:hover {
+    color: #555555 !important; /* Slightly gray on hover */
+}
+
+.nav-link {
+    color: #000000 !important; /* Black text */
+    font-size: 1.1rem;
+    margin: 0 15px;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #555555 !important; /* Slightly gray on hover */
+}
+
+.nav-link.active {
+    font-weight: bold;
+    border-bottom: 2px solid #000000; /* Black underline for active link */
+}
+
+.dropdown-menu {
+    background-color: #ffffff; /* White background */
+    border: 1px solid #000000; /* Black border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-item {
+    color: #000000 !important; /* Black text */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropdown-item:hover {
+    background-color: #f8f9fa; /* Light gray on hover */
+    color: #555555 !important; /* Slightly gray text */
+}
+
+.navbar-toggler {
+    border: 1px solid #000000; /* Black border */
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(0, 0, 0, 1)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+    .nav-link {
+        margin: 10px 0;
+    }
+}

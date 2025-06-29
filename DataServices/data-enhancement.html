@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MS Data ProDocs PVT's data enhancement services add depth and insight to your CRM data, enabling profiling, segmentation, and advanced analytics for better marketing results.">
+    <meta name="keywords" content="data enhancement, CRM data, customer profiling, data segmentation, B2B marketing">
+    <meta name="author" content="MS Data ProDocs PVT">
+    <title>Data Enhancement - MS Data ProDocs PVT</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <!-- GSAP for Animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <!-- Custom CSS for Navbar -->
+    <link rel="stylesheet" href="../navbar.css">
+
+    <!-- Custom CSS for Footer -->
+    <link rel="stylesheet" href="../footer.css">
+
+    <!-- Inline CSS for Content -->
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            overflow-x: hidden;
+            background-color: #f8f9fa; /* Subpage background */
+        }
+
+        /* Active Nav Link */
+        .active {
+            color: #f8c146 !important;
+        }
+
+        /* Intro Section */
+        .intro-section {
+            background: linear-gradient(135deg, #1a3c34, #30b8b1);
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .intro-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://via.placeholder.com/1920x1080?text=Data+Enhancement+Background') no-repeat center/cover;
+            opacity: 0.15;
+            z-index: 0;
+        }
+
+        .intro-section .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .intro-section h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        .intro-section p {
+            font-size: 1.3rem;
+            max-width: 800px;
+            margin: 0 auto;
+            opacity: 0.9;
+        }
+
+        /* Overview Section */
+        .overview-section {
+            padding: 80px 0;
+            background-color: #ffffff;
+        }
+
+        .overview-section h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #1a3c34;
+            margin-bottom: 20px;
+        }
+
+        .overview-section p {
+            font-size: 1.1rem;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .overview-section img {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Enhancement Options Section (Accordion) */
+        .options-section {
+            padding: 80px 0;
+            background-color: #f8f9fa;
+        }
+
+        .options-section h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #1a3c34;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .accordion {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .accordion-item {
+            background: #ffffff;
+            border: none;
+            margin-bottom: 10px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .accordion-button {
+            background: #1a3c34;
+            color: #f8c146;
+            font-size: 1.2rem;
+            font-weight: 600;
+            padding: 15px 20px;
+            border: none;
+            text-align: left;
+            transition: background-color 0.3s ease;
+        }
+
+        .accordion-button:not(.collapsed) {
+            background: #f8c146;
+            color: #1a3c34;
+        }
+
+        .accordion-button:focus {
+            box-shadow: none;
+        }
+
+        .accordion-body {
+            padding: 20px;
+            font-size: 1rem;
+            color: #555;
+        }
+
+        .accordion-button::after {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23f8c146'%3E%3Cpath fill-rule='evenodd' d='M8 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 4z'/%3E%3Cpath fill-rule='evenodd' d='M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z'/%3E%3C/svg%3E");
+        }
+
+        .accordion-button:not(.collapsed)::after {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%231a3c34'%3E%3Cpath fill-rule='evenodd' d='M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z'/%3E%3C/svg%3E");
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 992px) {
+            .intro-section {
+                padding: 80px 0;
+            }
+
+            .intro-section h1 {
+                font-size: 2.8rem;
+            }
+
+            .intro-section p {
+                font-size: 1.1rem;
+            }
+
+            .overview-section, .options-section {
+                padding: 60px 0;
+            }
+
+            .overview-section h2, .options-section h2 {
+                font-size: 2.2rem;
+            }
+
+            .overview-section img {
+                height: 250px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .intro-section {
+                padding: 60px 0;
+            }
+
+            .intro-section h1 {
+                font-size: 2rem;
+            }
+
+            .intro-section p {
+                font-size: 1rem;
+            }
+
+            .overview-section, .options-section {
+                padding: 40px 0;
+            }
+
+            .overview-section h2, .options-section h2 {
+                font-size: 1.8rem;
+            }
+
+            .overview-section img {
+                height: 200px;
+                margin-bottom: 20px;
+            }
+
+            .accordion-button {
+                font-size: 1rem;
+                padding: 10px 15px;
+            }
+
+            .accordion-body {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar (Updated, with active class for Data Services and Data Enhancement) -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand animate__animated animate__pulse" href="../index.html">MS Data ProDocs PVT</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link animate__animated" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link animate__animated" href="../AboutUs.html">About Us</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle animate__animated" href="#" id="mailingLists" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Mailing Lists
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="mailingLists">
+                            <li><a class="dropdown-item animate__animated" href="../MailingList/agriculture-industry.html">Agriculture Industry Lists</a></li>
+                            <li><a class="dropdown-item animate__animated" href="../MailingList/it-industry.html">IT Industry Lists</a></li>
+                            <li><a class="dropdown-item animate__animated" href="../MailingList/mining-industry.html">Mining Industry Lists</a></li>
+                            <li><a class="dropdown-item animate__animated" href="../MailingList/construction-industry.html">Construction Industry Lists</a></li>
+                            <li><a class="dropdown-item animate__animated" href="../MailingList/manufacturing-industry.html">Manufacturing Industry Lists</a></li>
+                            <li><a class="dropdown-item animate__animated" href="../MailingList/transportation-industry.html">Transportation Industry Lists</a></li>
+                            <li><a class="dropdown-item animate__animated" href="../MailingList/wholesale-trade-industry.html">Wholesale Trade Industry Lists</a></li>
+                            <li><a class="dropdown-item animate__animated" href="../MailingList/retail-industry.html">Retail Industry Lists</a></li>
+                            <li><a class="dropdown-item animate__animated" href="../MailingList/financial-services.html">Financial Services Lists</a></li>
+                            <li><a class="dropdown-item animate__animated" href="../MailingList/business-services.html">Business Services Industry Lists</a></li>
+                            <li><a class="dropdown-item animate__animated" href="../MailingList/textile-apparel-industry.html">Textile & Apparel Industry Lists</a></li>
+                            <li><a class="dropdown-item animate__animated" href="../MailingList/electronics-industry.html">Electronics Industry Lists</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle animate__animated" href="#" id="emailContacts" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Email Contacts
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="emailContacts">
+                            <li><a class="dropdown-item animate__animated" href="../EmailContacts/by-industry.html">By Industry</a></li>
+                            <li><a class="dropdown-item animate__animated" href="../EmailContacts/by-job-title.html">By Job Title</a></li>
+                            <li><a class="dropdown-item animate__animated" href="../EmailContacts/technology-lists.html">Technology Lists</a></li>
+                            <li><a class="dropdown-item animate__animated" href="../EmailContacts/healthcare-lists.html">Healthcare Lists</a></li>
+                            <li><a class="dropdown-item animate__animated" href="../EmailContacts/executives-email.html">Executives Email List</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle animate__animated active" href="#" id="dataServices" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Data Services
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="dataServices">
+                            <li><a class="dropdown-item animate__animated" href="email-appending.html">Email Appending</a></li>
+                            <li><a class="dropdown-item animate__animated" href="email-validation.html">Email Validation</a></li>
+                            <li><a class="dropdown-item animate__animated" href="data-cleansing.html">Data Cleansing</a></li>
+                            <li><a class="dropdown-item animate__animated active" href="data-enhancement.html">Data Enhancement</a></li>
+                            <li><a class="dropdown-item animate__animated" href="lead-management.html">Lead Management</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link animate__animated" href="../buyer-supplier.html">Buyer-Supplier</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link animate__animated" href="../contact.html">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Intro Section -->
+    <section class="intro-section">
+        <div class="container">
+            <h1 data-animate="fadeInDown">Data Enhancement Services</h1>
+            <p data-animate="fadeInUp" data-delay="0.2">Add depth and insight to your data with our advanced enhancement solutions for consumer and business databases.</p>
+        </div>
+    </section>
+
+    <!-- Overview Section -->
+    <section class="overview-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6" data-animate="fadeInLeft">
+                    <h2>Enhance Your Customer Data</h2>
+                    <p>We collaborate with owners of permissioned consumer and business databases, hosting many in-house to directly enhance your customer data. Our services improve data quality and enable profiling and segmentation to uncover who your customers are and why they choose you.</p>
+                    <p>By leveraging our extensive datasets, we provide actionable insights to optimize your marketing strategies and drive better results.</p>
+                </div>
+                <div class="col-md-6" data-animate="fadeInRight">
+                    <img src="https://www.damcogroup.com/wp-content/uploads/2024/12/2nd-image-1.jpg" alt="Data Enhancement" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhancement Options Section (Accordion) -->
+    <section class="options-section">
+        <div class="container">
+            <h2 data-animate="fadeIn">Data Enhancement Options</h2>
+            <div class="accordion" id="enhancementAccordion">
+                <div class="accordion-item" data-animate="fadeInUp" data-delay="0.1">
+                    <h3 class="accordion-header" id="heading1">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
+                            Telephone Numbers
+                        </button>
+                    </h3>
+                    <div id="collapse1" class="accordion-collapse collapse show" aria-labelledby="heading1" data-bs-parent="#enhancementAccordion">
+                        <div class="accordion-body">
+                            Append verified telephone numbers to your database for direct communication and outreach.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item" data-animate="fadeInUp" data-delay="0.2">
+                    <h3 class="accordion-header" id="heading2">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                            Fax Numbers
+                        </button>
+                    </h3>
+                    <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="heading2" data-bs-parent="#enhancementAccordion">
+                        <div class="accordion-body">
+                            Add fax numbers to support traditional communication channels for specific industries.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item" data-animate="fadeInUp" data-delay="0.3">
+                    <h3 class="accordion-header" id="heading3">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                            Additional Contact Names
+                        </button>
+                    </h3>
+                    <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3" data-bs-parent="#enhancementAccordion">
+                        <div class="accordion-body">
+                            Include additional contact names to expand your reach within target organizations.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item" data-animate="fadeInUp" data-delay="0.4">
+                    <h3 class="accordion-header" id="heading4">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                            Residential or Business Location
+                        </button>
+                    </h3>
+                    <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="heading4" data-bs-parent="#enhancementAccordion">
+                        <div class="accordion-body">
+                            Classify contacts as residential or business to tailor your marketing approach.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item" data-animate="fadeInUp" data-delay="0.5">
+                    <h3 class="accordion-header" id="heading5">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
+                            SIC & Market Sector Codes
+                        </button>
+                    </h3>
+                    <div id="collapse5" class="accordion-collapse collapse" aria-labelledby="heading5" data-bs-parent="#enhancementAccordion">
+                        <div class="accordion-body">
+                            Add Standard Industrial Classification (SIC) and market sector codes for precise industry targeting.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item" data-animate="fadeInUp" data-delay="0.6">
+                    <h3 class="accordion-header" id="heading6">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse6" aria-expanded="false" aria-controls="collapse6">
+                            Number of Employees
+                        </button>
+                    </h3>
+                    <div id="collapse6" class="accordion-collapse collapse" aria-labelledby="heading6" data-bs-parent="#enhancementAccordion">
+                        <div class="accordion-body">
+                            Include employee count data to segment businesses by size for tailored campaigns.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item" data-animate="fadeInUp" data-delay="0.7">
+                    <h3 class="accordion-header" id="heading7">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse7" aria-expanded="false" aria-controls="collapse7">
+                            Small Office/Home Office
+                        </button>
+                    </h3>
+                    <div id="collapse7" class="accordion-collapse collapse" aria-labelledby="heading7" data-bs-parent="#enhancementAccordion">
+                        <div class="accordion-body">
+                            Identify small office or home office businesses for targeted outreach.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item" data-animate="fadeInUp" data-delay="0.8">
+                    <h3 class="accordion-header" id="heading8">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse8" aria-expanded="false" aria-controls="collapse8">
+                            Credit Score
+                        </button>
+                    </h3>
+                    <div id="collapse8" class="accordion-collapse collapse" aria-labelledby="heading8" data-bs-parent="#enhancementAccordion">
+                        <div class="accordion-body">
+                            Append credit score data to assess financial stability for risk-based marketing.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item" data-animate="fadeInUp" data-delay="0.9">
+                    <h3 class="accordion-header" id="heading9">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse9" aria-expanded="false" aria-controls="collapse9">
+                            Financial Information
+                        </button>
+                    </h3>
+                    <div id="collapse9" class="accordion-collapse collapse" aria-labelledby="heading9" data-bs-parent="#enhancementAccordion">
+                        <div class="accordion-body">
+                            Enhance your database with financial data for deeper business insights.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item" data-animate="fadeInUp" data-delay="1.0">
+                    <h3 class="accordion-header" id="heading10">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse10" aria-expanded="false" aria-controls="collapse10">
+                            Geographic Information & Mapping (GIS)
+                        </button>
+                    </h3>
+                    <div id="collapse10" class="accordion-collapse collapse" aria-labelledby="heading10" data-bs-parent="#enhancementAccordion">
+                        <div class="accordion-body">
+                            Add GIS data, including location analysis, distance calculations, spatial analysis, and natural boundary analysis, for geographic targeting.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item" data-animate="fadeInUp" data-delay="1.1">
+                    <h3 class="accordion-header" id="heading11">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse11" aria-expanded="false" aria-controls="collapse11">
+                            Advanced Statistical Analysis
+                        </button>
+                    </h3>
+                    <div id="collapse11" class="accordion-collapse collapse" aria-labelledby="heading11" data-bs-parent="#enhancementAccordion">
+                        <div class="accordion-body">
+                            Classify, segment, and aggregate customer data using advanced methodologies like factor, cluster, and conjoint analysis for precise targeting.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (Unchanged) -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 mb-4">
+                    <h5 style="text-decoration: underline; color: #ffd000;">Address</h5>
+                    <p>MS Data ProDocs PVT,<br>1002 South Center Street #4296,<br>North America, MT 59230</p>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5 style="text-decoration: underline; color: #ffd000;">Industry Mailing Lists</h5>
+                    <ul class="list-unstyled">
+                        <li>Construction Industry Lists</li>
+                        <li>Manufacturing Industry Lists</li>
+                        <li>Mining Industry Lists</li>
+                        <li>Transportation Industry Lists</li>
+                        <li>Oil and Gas Mailing List</li>
+                        <li>Banking and Finance Email List</li>
+                        <li>Retail Industry Lists</li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5 style="text-decoration: underline; color: #ffd000;">Healthcare Lists</h5>
+                    <ul class="list-unstyled">
+                        <li>Medical Mailing List</li>
+                        <li>Physician Email List</li>
+                        <li>Dentist Email List</li>
+                        <li>Doctors Email List</li>
+                        <li>Physical Therapist Email List</li>
+                        <li>Practitioner</li>
+                        <li>Nurse Practitioner</li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5 style="text-decoration: underline; color: #ffd000;">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="../AboutUs.html">About Us</a></li>
+                        <li><a href="../privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="../terms-of-use.html">Terms of Use</a></li>
+                    </ul>
+                    <h5>Contact Us</h5>
+                    <p>Phone: +1 406-780-7401</p>
+                    <p>Email: info@msdataprodocs.org</p>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <p style="color: #30b8b1;">© 2025 MS Data ProDocs PVT. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+
+    <!-- Custom JS for Navbar Animation -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const navLinks = document.querySelectorAll('.nav-link, .dropdown-item');
+            navLinks.forEach(link => {
+                link.addEventListener('mouseover', function () {
+                    this.classList.add('animate__pulse');
+                });
+                link.addEventListener('animationend', function () {
+                    this.classList.remove('animate__pulse');
+                });
+            });
+        });
+    </script>
+
+    <!-- GSAP Animations -->
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Intro Section Animations
+        gsap.from(".intro-section h1", {
+            opacity: 0,
+            y: -50,
+            duration: 1,
+            ease: "power3.out",
+            scrollTrigger: {
+                trigger: ".intro-section",
+                start: "top 80%"
+            }
+        });
+
+        gsap.from(".intro-section p", {
+            opacity: 0,
+            y: 50,
+            duration: 1,
+            delay: 0.3,
+            ease: "power3.out",
+            scrollTrigger: {
+                trigger: ".intro-section",
+                start: "top 80%"
+            }
+        });
+
+        // Overview Section Animations
+        gsap.from(".overview-section h2", {
+            opacity: 0,
+            x: -50,
+            duration: 0.8,
+            ease: "power3.out",
+            scrollTrigger: {
+                trigger: ".overview-section",
+                start: "top 80%"
+            }
+        });
+
+        gsap.from(".overview-section p", {
+            opacity: 0,
+            y: 50,
+            duration: 0.8,
+            delay: 0.2,
+            ease: "power3.out",
+            scrollTrigger: {
+                trigger: ".overview-section",
+                start: "top 80%"
+            }
+        });
+
+        gsap.from(".overview-section img", {
+            opacity: 0,
+            x: 50,
+            duration: 0.8,
+            delay: 0.2,
+            ease: "power3.out",
+            scrollTrigger: {
+                trigger: ".overview-section",
+                start: "top 80%"
+            }
+        });
+
+        // Options Section Animations
+        gsap.from(".options-section h2", {
+            opacity: 0,
+            y: -30,
+            duration: 0.8,
+            ease: "power3.out",
+            scrollTrigger: {
+                trigger: ".options-section",
+                start: "top 80%"
+            }
+        });
+
+        gsap.from(".accordion-item", {
+            opacity: 0,
+            y: 50,
+            duration: 0.6,
+            stagger: 0.1,
+            ease: "power3.out",
+            scrollTrigger: {
+                trigger: ".accordion",
+                start: "top 80%"
+            }
+        });
+    </script>
+</body>
+</html>

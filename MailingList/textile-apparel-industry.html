@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MS Data ProDocs PVT offers Textile & Apparel Industry Mailing Lists to target decision-makers in textile manufacturing, fabric mills, and apparel production for effective B2B marketing campaigns.">
+    <meta name="keywords" content="textile industry mailing lists, apparel industry, textile manufacturing, fabric mills, B2B marketing, email marketing">
+    <meta name="author" content="MS Data ProDocs PVT">
+    <meta name="title" content="Textile & Apparel Industry Mailing Lists - MS Data ProDocs PVT">
+    <title>Textile & Apparel Industry Mailing Lists - MS Data ProDocs PVT</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <!-- GSAP for Animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <!-- Particles.js for Particle Effects -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+    <!-- Custom CSS for Navbar -->
+    <link rel="stylesheet" href="../navbar.css">
+
+    <!-- Custom CSS for Footer -->
+    <link rel="stylesheet" href="../footer.css">
+
+    <!-- Inline CSS for Unique Body Content -->
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #e0e0e0;
+            overflow-x: hidden;
+            background: linear-gradient(180deg, #2c2c2c 0%, #1a3c34 100%); /* Same color scheme */
+        }
+
+        /* Active Nav Link */
+        .active {
+            color: #f8c146 !important;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            position: relative;
+            padding: 130px 0;
+            color: white;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .hero-section #particles-js {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            background: linear-gradient(135deg, rgba(44, 44, 44, 0.9), rgba(26, 60, 52, 0.9)), url('https://images.unsplash.com/photo-1551488831-68b81d0c137d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero-section .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-section h1 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 4rem;
+            font-weight: 700;
+            color: #f8c146;
+            margin-bottom: 20px;
+            text-shadow: 0 3px 6px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-section p {
+            font-size: 1.5rem;
+            max-width: 900px;
+            margin: 0 auto;
+            color: #e0e0e0;
+        }
+
+        .hero-section .cta-btn {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 15px 40px;
+            background: linear-gradient(45deg, #f8c146, #ffdd66);
+            color: #2c2c2c;
+            font-weight: 600;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .hero-section .cta-btn:hover {
+            transform: scale(1.08) rotate(-1deg);
+            box-shadow: 0 6px 20px rgba(248, 193, 70, 0.5);
+        }
+
+        /* Textile Overview Section */
+        .textile-overview-section {
+            padding: 80px 0;
+            background: #ffffff;
+            color: #2c2c2c;
+            position: relative;
+        }
+
+        .textile-overview-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://images.unsplash.com/photo-1580582932707-520aed4d3202?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') no-repeat center/cover;
+            opacity: 0.1;
+            z-index: 0;
+        }
+
+        .textile-overview-section .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .textile-overview-section h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #f8c146;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .textile-overview-section .content-box {
+            background: rgba(44, 44, 44, 0.9);
+            padding: 30px;
+            border-radius: 15px;
+            border: 2px solid #f8c146;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .textile-overview-section .content-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+        }
+
+        .textile-overview-section .image-box {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .textile-overview-section .image-box img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .textile-overview-section .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .textile-overview-section .stat-box {
+            background: linear-gradient(135deg, rgba(26, 43, 71, 0.9), rgba(44, 44, 44, 0.9)); /* Unique gradient background */
+            padding: 25px;
+            border-radius: 12px;
+            text-align: center;
+            border: 1px solid #f8c146;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        .textile-overview-section .stat-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(248, 193, 70, 0.2), transparent);
+            transition: left 0.4s ease;
+        }
+
+        .textile-overview-section .stat-box:hover::before {
+            left: 100%;
+        }
+
+        .textile-overview-section .stat-box:hover {
+            transform: translateY(-5px) rotate(1deg); /* Unique hover rotation */
+            box-shadow: 0 6px 20px rgba(248, 193, 70, 0.3);
+        }
+
+        .textile-overview-section .stat-box h3 {
+            font-size: 2rem;
+            color: #f8c146;
+            margin-bottom: 10px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .textile-overview-section .stat-box p {
+            font-size: 1rem;
+            color: #e0e0e0;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Textile Categories Section */
+        .textile-categories-section {
+            padding: 80px 0;
+            background: #2c2c2c;
+        }
+
+        .textile-categories-section h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #f8c146;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .textile-categories-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .textile-categories-section ul li {
+            font-size: 1rem;
+            color: #e0e0e0;
+            margin-bottom: 12px;
+            position: relative;
+            padding-left: 25px;
+        }
+
+        .textile-categories-section ul li::before {
+            content: '✔';
+            position: absolute;
+            left: 0;
+            color: #f8c146;
+            font-size: 1.2rem;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 992px) {
+            .hero-section {
+                padding: 100px 0;
+            }
+
+            .hero-section h1 {
+                font-size: 3.2rem;
+            }
+
+            .hero-section p {
+                font-size: 1.3rem;
+            }
+
+            .textile-overview-section, .textile-categories-section {
+                padding: 60px 0;
+            }
+
+            .textile-overview-section h2, .textile-categories-section h2 {
+                font-size: 2.2rem;
+            }
+
+            .textile-overview-section .stats-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero-section {
+                padding: 80px 0;
+            }
+
+            .hero-section h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-section p {
+                font-size: 1.1rem;
+            }
+
+            .textile-overview-section, .textile-categories-section {
+                padding: 40px 0;
+            }
+
+            .textile-overview-section h2, .textile-categories-section h2 {
+                font-size: 1.8rem;
+            }
+
+            .textile-categories-section ul li {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand animate__animated animate__pulse" href="../index.html">MS Data ProDocs PVT</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link animate__animated" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link animate__animated" href="../AboutUs.html">About Us</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle animate__animated active" href="#" id="mailingLists" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Mailing Lists
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="mailingLists">
+                            <li><a class="dropdown-item animate__animated" href="agriculture-industry.html">Agriculture Industry Lists</a></li>
+                            <li><a class="dropdown-item animate__animated" href="it-industry.html">IT Industry Lists</a></li>
+                            <li><a class="dropdown-item animate__animated" href="mining-industry.html">Mining Industry Lists</a></li>
+                            <li><a class="dropdown-item animate__animated" href="construction-industry.html">Construction Industry Lists</a></li>
+                            <li><a class="dropdown-item animate__animated" href="manufacturing-industry.html">Manufacturing Industry Lists</a></li>
+                            <li><a class="dropdown-item animate__animated" href="transportation-industry.html">Transportation Industry Lists</a></li>
+                            <li><a class="dropdown-item animate__animated" href="wholesale-trade-industry.html">Wholesale Trade Industry Lists</a></li>
+                            <li><a class="dropdown-item animate__animated" href="retail-industry.html">Retail Industry Lists</a></li>
+                            <li><a class="dropdown-item animate__animated" href="financial-services.html">Financial Services Lists</a></li>
+                            <li><a class="dropdown-item animate__animated" href="business-services.html">Business Services Industry Lists</a></li>
+                            <li><a class="dropdown-item animate__animated active" href="textile-apparel-industry.html">Textile & Apparel Industry Lists</a></li>
+                            <li><a class="dropdown-item animate__animated" href="electronics-industry.html">Electronics Industry Lists</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle animate__animated" href="#" id="emailContacts" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Email Contacts
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="emailContacts">
+                            <li><a class="dropdown-item animate__animated" href="../EmailContacts/by-industry.html">By Industry</a></li>
+                            <li><a class="dropdown-item animate__animated" href="../EmailContacts/by-job-title.html">By Job Title</a></li>
+                            <li><a class="dropdown-item animate__animated" href="../EmailContacts/technology-lists.html">Technology Lists</a></li>
+                            <li><a class="dropdown-item animate__animated" href="../EmailContacts/healthcare-lists.html">Healthcare Email Lists</a></li>
+                            <li><a class="dropdown-item animate__animated" href="../EmailContacts/executives-email.html">Executives Email List</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle animate__animated" href="#" id="dataServices" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Data Services
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="dataServices">
+                            <li><a class="dropdown-item animate__animated" href="../DataServices/email-appending.html">Email Appending</a></li>
+                            <li><a class="dropdown-item animate__animated" href="../DataServices/email-validation.html">Email Validation</a></li>
+                            <li><a class="dropdown-item animate__animated" href="../DataServices/data-cleansing.html">Data Cleansing</a></li>
+                            <li><a class="dropdown-item animate__animated" href="../DataServices/data-enhancement.html">Data Enhancement</a></li>
+                            <li><a class="dropdown-item animate__animated" href="../DataServices/lead-management.html">Lead Management</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link animate__animated" href="../buyer-supplier.html">Buyer-Supplier</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link animate__animated" href="../contact.html">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div id="particles-js"></div>
+        <div class="container">
+            <h1 data-animate="fadeInDown">Textile & Apparel Industry Mailing Lists</h1>
+            <p data-animate="fadeInUp" data-delay="0.2">Target decision-makers in textile manufacturing, fabric mills, and apparel production with our verified mailing lists for impactful B2B campaigns.</p>
+            <a href="../contact.html" class="cta-btn" data-animate="fadeInUp" data-delay="0.4">Explore Textile Contacts</a>
+        </div>
+    </section>
+
+    <!-- Textile Overview Section -->
+    <section class="textile-overview-section">
+        <div class="container">
+            <h2 data-animate="fadeIn">Connect with Textile & Apparel Industry Leaders</h2>
+            <div class="content-box text-white" data-animate="fadeInUp">
+                <p>Our Textile & Apparel Industry Mailing Lists provide access to executives in textile manufacturing, fabric mills, and apparel production. With highly responsive business data, our database supports online, offline, and multi-channel marketing campaigns, including direct mail, email, and telemarketing.</p>
+                <p>Customize your outreach with extensive selects by product type for precise and effective marketing.</p>
+            </div>
+            <div class="image-box" data-animate="fadeInUp" data-delay="0.2">
+                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Textile Industry" />
+            </div>
+            <div class="stats-grid" data-animate="fadeInRight">
+                <div class="stat-box">
+                    <h3>11,000,900+</h3>
+                    <p>Total Companies</p>
+                </div>
+                <div class="stat-box">
+                    <h3>17,800,000+</h3>
+                    <p>Est. Employment</p>
+                </div>
+                <div class="stat-box">
+                    <h3>SIC 22-99</h3>
+                    <p>Industry Codes</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Textile Categories Section -->
+    <section class="textile-categories-section">
+        <div class="container">
+            <h2 data-animate="fadeIn">Explore Textile & Apparel Industry Categories</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <ul data-animate="fadeInUp" data-delay="0.2">
+                        <li>Textile Manufacturers Email/Phone/Mailing List</li>
+                        <li>Textile Mill Products Manufacturing Industry Executives Email List</li>
+                        <li>Fabrics-Manufacturers Email List</li>
+                        <li>Knitting Mills Email List</li>
+                        <li>Narrow Fabric and Other Small Wares Mills Mailing List</li>
+                        <li>Yarn and Thread Mills Mailing List</li>
+                        <li>Lace & Warp Knit Fabric Mills Mailing List</li>
+                        <li>Woolen Mills Email List</li>
+                        <li>Broad Woven Fabric Mills Mailing List</li>
+                        <li>Italian Fashion Wholesale: Textiles & Fabrics Manufacturers Mailing List</li>
+                        <li>Member List Japan Textile Federation</li>
+                        <li>Top Textile Companies Mailing Lists</li>
+                        <li>List of Textile and Apparel Industries in US</li>
+                        <li>Textiles And Fabrics Distributors Email Mailing List</li>
+                        <li>United States Fabric Mill Directory List</li>
+                        <li>Industrial Fabric & Textile Manufacturer and Supplier Telemarketing List</li>
+                        <li>Textile Manufacturing Workers Email Lists</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <ul data-animate="fadeInUp" data-delay="0.4">
+                        <li>Textiles Production Manager Mailing Lists</li>
+                        <li>Clothing/Garment/Textile Industry Mailing Lists</li>
+                        <li>Director of Fabric Development Marketing Lists</li>
+                        <li>Textile Fabric Sales Executives Mailing List</li>
+                        <li>Textile Fabric Marketing Executives Email List</li>
+                        <li>Printing Manager for Textile Industry Contact List</li>
+                        <li>Sales and Marketing Manager Textiles Industry Mailing Lists</li>
+                        <li>Garment / Textile / Woven / Knit / Fabric Email Lists</li>
+                        <li>US Textile & Fabric Industry Email list</li>
+                        <li>UK Textile & Fabric Industry Executives Marketing List</li>
+                        <li>Canada Textile & Fabric Industry Executive List</li>
+                        <li>Europe Textile & Fabric Industry Mailing Lists</li>
+                        <li>Singapore Textile & Fabric Industry Marketing Mailing List</li>
+                        <li>Scotland Textile & Fabric Industry Email Marketing List</li>
+                        <li>Asian Textile & Fabric Industry Executives Sales Leads List</li>
+                        <li>Japan Textile & Fabric Industry Business List</li>
+                        <li>Australia Textile & Fabric Industry Mailing List</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 mb-4">
+                    <h5 style="text-decoration: underline; color: #ffd000;">Address</h5>
+                    <p>MS Data ProDocs PVT,<br>1002 South Center Street #4296,<br>North America, MT 59230</p>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5 style="text-decoration: underline; color: #ffd000;">Industry Mailing Lists</h5>
+                    <ul class="list-unstyled">
+                        <li>Construction Industry Lists</li>
+                        <li>Manufacturing Industry Lists</li>
+                        <li>Mining Industry Lists</li>
+                        <li>Transportation Industry Lists</li>
+                        <li>Oil and Gas Mailing List</li>
+                        <li>Banking and Finance Email List</li>
+                        <li>Retail Industry Lists</li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5 style="text-decoration: underline; color: #ffd000;">Healthcare Lists</h5>
+                    <ul class="list-unstyled">
+                        <li>Medical Mailing List</li>
+                        <li>Physician Email List</li>
+                        <li>Dentist Email List</li>
+                        <li>Doctors Email List</li>
+                        <li>Physical Therapy List</li>
+                        <li>Practitioner</li>
+                        <li>Nurse Practitioner</li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5 style="text-decoration: underline; color: #ffd000;">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="../AboutUs.html">About Us</a></li>
+                        <li><a href="../privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="../terms-of.html">Terms</a></li>
+                    </ul>
+                    <h5>Contact Us</h5>
+                    <p>Phone: +1 406-780-500</p>
+                    <p>Email: <a href="mailto:info@msdataprodocs.org">info@msdataprodocs.org</a></p>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                © 2025 MS Data ProDocs. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JS for Navbar Animation -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const navLinks = document.querySelectorAll('.nav-link, .dropdown-item');
+            navLinks.forEach(link => {
+                link.addEventListener('mouseover', () => {
+                    link.classList.add('animate__pulse');
+                });
+                link.addEventListener('animationend', () => {
+                    link.classList.remove('animate__pulse');
+                });
+            });
+        });
+    </script>
+
+    <!-- Particles.js Configuration -->
+    <script>
+        particlesJS('particles-js', {
+            particles: {
+                number: { value: 80, density: { enable: true, value_area: 800 } },
+                color: { value: '#f8c146' },
+                shape: { type: 'edge' }, /* Unique shape */
+                opacity: { value: 0.6, random: true },
+                size: { value: 4, random: true },
+                line_linked: { enable: true, distance: 130, color: '#f8c146', opacity: 0.3, width: 1.5 },
+                move: { enable: true, speed: 3, direction: 'none', random: true }
+            },
+            interactivity: {
+                detect_on: 'canvas',
+                events: { onhover: { enable: true, mode: 'bubble' }, onclick: { enable: true, mode: 'repulse' } }, /* Unique interaction */
+                modes: { bubble: { distance: 200, size: 8, duration: 0.3 }, repulse: { distance: 150 } }
+            },
+            retina_detect: true
+        });
+    </script>
+
+    <!-- GSAP Animations -->
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Hero Section
+        gsap.from(".hero-section h1", {
+            opacity: 0,
+            y: -100,
+            scale: 0.5,
+            duration: 1.5,
+            ease: "back.out(1.5)", /* Unique pop-in effect */
+            scrollTrigger: { trigger: ".hero-section", start: "top 80%" }
+        });
+
+        gsap.from(".hero-section p", {
+            opacity: 0,
+            y: 100,
+            scale: 0.5,
+            duration: 1.5,
+            delay: 0.3,
+            ease: "back.out(1.5)",
+            scrollTrigger: { trigger: ".hero-section", start: "top 80%" }
+        });
+
+        gsap.from(".hero-section .cta-btn", {
+            opacity: 0,
+            rotation: 360,
+            duration: 1.2,
+            delay: 0.5,
+            ease: "power3.out", /* Spin-in effect */
+            scrollTrigger: { trigger: ".hero-section", start: "top 80%" }
+        });
+
+        // Textile Overview Section
+        gsap.from(".textile-overview-section h2", {
+            opacity: 0,
+            y: -50,
+            duration: 1,
+            ease: "elastic.out(1, 0.6)", /* Bouncy entrance */
+            scrollTrigger: { trigger: ".textile-overview-section", start: "top 80%" }
+        });
+
+        gsap.from(".textile-overview-section .content-box", {
+            opacity: 0,
+            x: -100,
+            rotation: 10,
+            duration: 1.2,
+            ease: "power4.out",
+            scrollTrigger: { trigger: ".textile-overview-section", start: "top 80%" }
+        });
+
+        gsap.from(".textile-overview-section .image-box", {
+            opacity: 0,
+            x: 100,
+            rotation: -10,
+            duration: 1.2,
+            delay: 0.2,
+            ease: "power4.out",
+            scrollTrigger: { trigger: ".textile-overview-section", start: "top 80%" }
+        });
+
+        gsap.from(".textile-overview-section .stat-box", {
+            opacity: 0,
+            y: 50,
+            rotation: (index) => (index * 15 - 15), /* Unique rotation for each stat box */
+            duration: 1,
+            stagger: 0.2,
+            ease: "back.out(1.8)", /* Pop-in with rotation */
+            scrollTrigger: { trigger: ".textile-overview-section", start: "top 80%" }
+        });
+
+        // Textile Categories Section
+        gsap.from(".textile-categories-section h2", {
+            opacity: 0,
+            scale: 0.7,
+            duration: 1,
+            ease: "power3.out",
+            scrollTrigger: { trigger: ".textile-categories-section", start: "top 80%" }
+        });
+
+        gsap.from(".textile-categories-section ul li", {
+            opacity: 0,
+            y: 30,
+            duration: 0.8,
+            stagger: 0.05,
+            ease: "power2.inOut", /* Smooth cascade */
+            scrollTrigger: { trigger: ".textile-categories-section", start: "top 80%" }
+        });
+    </script>
+</body>
+</html>

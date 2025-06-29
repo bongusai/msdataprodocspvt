@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MS Data ProDocs PVT simplifies buyer-supplier relationships, connecting thousands of suppliers and buyers globally with expert marketing solutions.">
+    <meta name="keywords" content="buyer-supplier, B2B marketing, supplier relationships, digital marketing, data management">
+    <meta name="author" content="Data ProDocs INC">
+    <title>Buyer-Supplier - MS Data ProDocs PVT</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <!-- GSAP for Animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <!-- Custom CSS for Navbar -->
+    <link rel="stylesheet" href="navbar.css">
+
+    <!-- Custom CSS for Footer -->
+    <link rel="stylesheet" href="footer.css">
+
+    <!-- Inline CSS for Content -->
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            overflow-x: hidden;
+            background-color: #f5f7fb;
+        }
+
+        /* Active Nav Link */
+        .active {
+            color: #f8c146 !important;
+        }
+
+        /* Intro Section */
+        .intro-section {
+            background: linear-gradient(135deg, #1a3c34, #30b8b1);
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .intro-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://via.placeholder.com/1920x1080?text=Buyer-Supplier+Background') no-repeat center/cover;
+            opacity: 0.15;
+            z-index: 0;
+        }
+
+        .intro-section .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .intro-section h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        .intro-section p {
+            font-size: 1.3rem;
+            max-width: 800px;
+            margin: 0 auto;
+            opacity: 0.9;
+        }
+
+        /* Content-Image Section */
+        .content-image-section {
+            padding: 80px 0;
+            /* background-color: #ffffff; */
+            background-image:linear-gradient(180deg, #ffffff, #2e5a50);
+        }
+
+        .content-image-section h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #1a3c34;
+            margin-bottom: 20px;
+        }
+
+        .content-image-section ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .content-image-section ul li {
+            font-size: 1.1rem;
+            color: #555;
+            margin-bottom: 15px;
+            position: relative;
+            padding-left: 25px;
+        }
+
+        .content-image-section ul li::before {
+            content: '✔';
+            color: #f8c146;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        .content-image-section img {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Contact Form Section */
+        .contact-form-section {
+            padding: 80px 0;
+            background: linear-gradient(180deg, #1a3c34, #2e5a50);
+            color: white;
+            text-align: center;
+        }
+
+        .contact-form-section h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .contact-form-section p {
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin: 0 auto 30px;
+            opacity: 0.9;
+        }
+
+        .contact-form {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 15px;
+            max-width: 600px;
+            margin: 0 auto;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .form-control {
+            border-radius: 10px;
+            padding: 12px;
+            font-size: 1rem;
+            border: 1px solid #ddd;
+            background-color: #fff;
+        }
+
+        .form-control:focus {
+            border-color: #f8c146;
+            box-shadow: 0 0 5px rgba(248, 193, 70, 0.5);
+        }
+
+        .btn-primary {
+            background-color: #f8c146;
+            border: none;
+            padding: 12px 30px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: #e5a933;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 992px) {
+            .intro-section {
+                padding: 80px 0;
+            }
+
+            .intro-section h1 {
+                font-size: 2.8rem;
+            }
+
+            .intro-section p {
+                font-size: 1.1rem;
+            }
+
+            .content-image-section, .contact-form-section {
+                padding: 60px 0;
+            }
+
+            .content-image-section h2, .contact-form-section h2 {
+                font-size: 2.2rem;
+            }
+
+            .content-image-section img {
+                height: 250px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .intro-section {
+                padding: 60px 0;
+            }
+
+            .intro-section h1 {
+                font-size: 2rem;
+            }
+
+            .intro-section p {
+                font-size: 1rem;
+            }
+
+            .content-image-section, .contact-form-section {
+                padding: 40px 0;
+            }
+
+            .content-image-section h2, .contact-form-section h2 {
+                font-size: 1.8rem;
+            }
+
+            .content-image-section img {
+                height: 200px;
+                margin-bottom: 20px;
+            }
+
+            .contact-form {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar (Unchanged) -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand animate__animated animate__pulse" href="home.html">MS Data ProDocs PVT</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link animate__animated" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link animate__animated" href="AboutUs.html">About Us</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle animate__animated" href="#" id="mailingLists" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Mailing Lists
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="mailingLists">
+                            <li><a class="dropdown-item animate__animated" href="MailingList/agriculture-industry.html">Agriculture Industry Lists</a></li>
+                            <li><a class="dropdown-item animate__animated" href="MailingList/it-industry.html">IT Industry Lists</a></li>
+                            <li><a class="dropdown-item animate__animated" href="MailingList/mining-industry.html">Mining Industry Lists</a></li>
+                            <li><a class="dropdown-item animate__animated" href="MailingList/construction-industry.html">Construction Industry Lists</a></li>
+                            <li><a class="dropdown-item animate__animated" href="MailingList/manufacturing-industry.html">Manufacturing Industry Lists</a></li>
+                            <li><a class="dropdown-item animate__animated" href="MailingList/transportation-industry.html">Transportation Industry Lists</a></li>
+                            <li><a class="dropdown-item animate__animated" href="MailingList/wholesale-trade-industry.html">Wholesale Trade Industry Lists</a></li>
+                            <li><a class="dropdown-item animate__animated" href="MailingList/retail-industry.html">Retail Industry Lists</a></li>
+                            <li><a class="dropdown-item animate__animated" href="MailingList/financial-services.html">Financial Services Lists</a></li>
+                            <li><a class="dropdown-item animate__animated" href="MailingList/business-services.html">Business Services Industry Lists</a></li>
+                            <li><a class="dropdown-item animate__animated" href="MailingList/textile-apparel-industry.html">Textile & Apparel Industry Lists</a></li>
+                            <li><a class="dropdown-item animate__animated" href="MailingList/electronics-industry.html">Electronics Industry Lists</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle animate__animated" href="#" id="emailContacts" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Email Contacts
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="emailContacts">
+                            <li><a class="dropdown-item animate__animated" href="EmailContacts/by-industry.html">By Industry</a></li>
+                            <li><a class="dropdown-item animate__animated" href="EmailContacts/by-job-title.html">By Job Title</a></li>
+                            <li><a class="dropdown-item animate__animated" href="EmailContacts/technology-lists.html">Technology Lists</a></li>
+                            <li><a class="dropdown-item animate__animated" href="EmailContacts/healthcare-lists.html">Healthcare Lists</a></li>
+                            <li><a class="dropdown-item animate__animated" href="EmailContacts/executives-email.html">Executives Email List</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle animate__animated" href="#" id="dataServices" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Data Services
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="dataServices">
+                            <li><a class="dropdown-item animate__animated" href="DataServices/email-appending.html">Email Appending</a></li>
+                            <li><a class="dropdown-item animate__animated" href="DataServices/email-validation.html">Email Validation</a></li>
+                            <li><a class="dropdown-item animate__animated" href="DataServices/data-cleansing.html">Data Cleansing</a></li>
+                            <li><a class="dropdown-item animate__animated" href="DataServices/data-enhancement.html">Data Enhancement</a></li>
+                            <li><a class="dropdown-item animate__animated" href="DataServices/lead-management.html">Lead Management</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link animate__animated active" href="buyer-supplier.html">Buyer-Supplier</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link animate__animated" href="contact.html">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Intro Section -->
+    <section class="intro-section">
+        <div class="container">
+            <h1 data-animate="fadeInDown">Buyer-Supplier Solutions</h1>
+            <p data-animate="fadeInUp" data-delay="0.2">Simplifying complex buyer-supplier relationships by connecting thousands of global suppliers and buyers on a single platform.</p>
+        </div>
+    </section>
+
+    <!-- Buyer-Supplier Relationship Section (Content Left, Image Right) -->
+    <section class="content-image-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6" data-animate="fadeInLeft">
+                    <h2>Buyers & Suppliers Relationship</h2>
+                    <ul>
+                        <li>At Data ProDocs, we simplify the complex relationship between suppliers and buyers, fostering seamless connections.</li>
+                        <li>We bring suppliers and buyers together on a unified platform, reaching thousands globally with ease.</li>
+                        <li>With over 8 years of proven success in the market and tech industry, we deliver results.</li>
+                        <li>Our team of seasoned experts elevates your marketing strategy to drive industry-leading growth.</li>
+                        <li>We collaborate with your company to achieve targets, even when resources or time are limited.</li>
+                        <li>Our consulting team acts swiftly to propel your business to the next level of performance.</li>
+                    </ul>
+                </div>
+                <div class="col-md-6" data-animate="fadeInRight">
+                    <img src="https://apurchasingd.com/wp-content/uploads/2024/02/Supplier-Relationships.jpg" alt="Buyer-Supplier Relationship" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Footer (Unchanged) -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 mb-4">
+                    <h5 style="text-decoration: underline; color: #ffd000;">Address</h5>
+                    <p>MS Data ProDocs PVT,<br>1002 South Center Street #4296,<br>North America, MT 59230</p>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5 style="text-decoration: underline; color: #ffd000;">Industry Mailing Lists</h5>
+                    <ul class="list-unstyled">
+                        <li>Construction Industry Lists</li>
+                        <li>Manufacturing Industry Lists</li>
+                        <li>Mining Industry Lists</li>
+                        <li>Transportation Industry Lists</li>
+                        <li>Oil and Gas Mailing List</li>
+                        <li>Banking and Finance Email List</li>
+                        <li>Retail Industry Lists</li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5 style="text-decoration: underline; color: #ffd000;">Healthcare Lists</h5>
+                    <ul class="list-unstyled">
+                        <li>Medical Mailing List</li>
+                        <li>Physician Email List</li>
+                        <li>Dentist Email List</li>
+                        <li>Doctors Email List</li>
+                        <li>Physical Therapist Email List</li>
+                        <li>Practitioner</li>
+                        <li>Nurse Practitioner</li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5 style="text-decoration: underline; color: #ffd000;">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="AboutUs.html">About Us</a></li>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms-of-use.html">Terms of Use</a></li>
+                    </ul>
+                    <h5>Contact Us</h5>
+                    <p>Phone: +1 406-780-7401</p>
+                    <p>Email: info@msdataprodocs.org</p>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <p style="color: #30b8b1;">© 2025 MS Data ProDocs PVT. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+
+    <!-- Custom JS for Navbar Animation -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const navLinks = document.querySelectorAll('.nav-link, .dropdown-item');
+            navLinks.forEach(link => {
+                link.addEventListener('mouseover', function () {
+                    this.classList.add('animate__pulse');
+                });
+                link.addEventListener('animationend', function () {
+                    this.classList.remove('animate__pulse');
+                });
+            });
+        });
+    </script>
+
+    <!-- GSAP Animations -->
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Intro Section Animations
+        gsap.from(".intro-section h1", {
+            opacity: 0,
+            y: -50,
+            duration: 1,
+            ease: "power3.out",
+            scrollTrigger: {
+                trigger: ".intro-section",
+                start: "top 80%"
+            }
+        });
+
+        gsap.from(".intro-section p", {
+            opacity: 0,
+            y: 50,
+            duration: 1,
+            delay: 0.3,
+            ease: "power3.out",
+            scrollTrigger: {
+                trigger: ".intro-section",
+                start: "top 80%"
+            }
+        });
+
+        // Content-Image Section Animations
+        gsap.from(".content-image-section h2", {
+            opacity: 0,
+            x: -50,
+            duration: 0.8,
+            ease: "power3.out",
+            scrollTrigger: {
+                trigger: ".content-image-section",
+                start: "top 80%"
+            }
+        });
+
+        gsap.from(".content-image-section ul", {
+            opacity: 0,
+            y: 50,
+            duration: 0.8,
+            delay: 0.2,
+            ease: "power3.out",
+            scrollTrigger: {
+                trigger: ".content-image-section",
+                start: "top 80%"
+            }
+        });
+
+        gsap.from(".content-image-section img", {
+            opacity: 0,
+            x: 50,
+            duration: 0.8,
+            delay: 0.2,
+            ease: "power3.out",
+            scrollTrigger: {
+                trigger: ".content-image-section",
+                start: "top 80%"
+            }
+        });
+
+        // Contact Form Section Animations
+        gsap.from(".contact-form-section h2", {
+            opacity: 0,
+            y: -30,
+            duration: 0.8,
+            ease: "power3.out",
+            scrollTrigger: {
+                trigger: ".contact-form-section",
+                start: "top 80%"
+            }
+        });
+
+        gsap.from(".contact-form-section p", {
+            opacity: 0,
+            y: 30,
+            duration: 0.8,
+            delay: 0.2,
+            ease: "power3.out",
+            scrollTrigger: {
+                trigger: ".contact-form-section",
+                start: "top 80%"
+            }
+        });
+
+        gsap.from(".contact-form", {
+            opacity: 0,
+            y: 50,
+            duration: 0.8,
+            delay: 0.4,
+            ease: "power3.out",
+            scrollTrigger: {
+                trigger: ".contact-form-section",
+                start: "top 80%"
+            }
+        });
+
+        gsap.from(".contact-form .btn-primary", {
+            opacity: 0,
+            scale: 0.8,
+            duration: 0.8,
+            delay: 0.6,
+            ease: "back.out(1.7)",
+            scrollTrigger: {
+                trigger: ".contact-form-section",
+                start: "top 80%"
+            }
+        });
+    </script>
+</body>
+</html>

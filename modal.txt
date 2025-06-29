@@ -1,0 +1,45 @@
+i want to start a strtup comany for that make beautifu web site using bootstrap and css and also use animate.css for better animations for scrolling 
+
+my company name isMS Data ProDocs PVT
+
+first we design a most attractive and animated navbar 
+main list items is 
+
+Home
+About Us
+Mailing Lists
+Email Contacts
+Data Services
+Buyer-Supplier
+Contact Us
+
+-----------
+sub anchor list items is :
+Mailing Lists ->
+Agriculture Industry Lists
+IT Industry Lists
+Mining Industry Lists
+Construction Industry Lists
+Manufacturing Industry Lists
+Transportation Industry Lists
+Wholesale Trade Industry Lists
+Retail Industry Lists
+Financial Services Lists
+Business Services Industry Lists
+Textile & Apparel Industry Lists
+Electronics Industry Lists
+
+Email Contacts ->
+By Industry
+By Job Title
+Technology Lists
+Healthcare Lists
+Executives Email List
+
+Data Services ->
+Email Appending
+Email Validation
+Data Cleansing
+Data Enhancement
+Lead Management
+

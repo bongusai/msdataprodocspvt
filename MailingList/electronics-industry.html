@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MS Data ProDocs PVT offers Electronics Industry Mailing Lists to target decision-makers in consumer electronics, components, and high-tech manufacturing for effective B2B marketing campaigns.">
+    <meta name="keywords" content="electronics industry mailing lists, consumer electronics, electronic components, high-tech, B2B marketing, email marketing">
+    <meta name="author" content="MS Data ProDocs PVT">
+    <meta name="title" content="Electronics Industry Mailing Lists - MS Data ProDocs PVT">
+    <title>Electronics Industry Mailing Lists - MS Data ProDocs PVT</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <!-- GSAP for Animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <!-- Particles.js for Particle Effects -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+    <!-- Custom CSS for Navbar -->
+    <link rel="stylesheet" href="../navbar.css">
+
+    <!-- Custom CSS for Footer -->
+    <link rel="stylesheet" href="../footer.css">
+
+    <!-- Inline CSS for Unique Body Content -->
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #e0e0e0;
+            overflow-x: hidden;
+            background: linear-gradient(180deg, #2c2c2c 0%, #1a3c34 100%); /* Same color scheme */
+        }
+
+        /* Active Nav Link */
+        .active {
+            color: #f8c146 !important;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            position: relative;
+            padding: 120px 0;
+            color: white;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .hero-section #particles-js {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            background: linear-gradient(135deg, rgba(44, 44, 44, 0.9), rgba(26, 60, 52, 0.9)), url('https://images.unsplash.com/photo-1516321497487-e288fb19713f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero-section .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-section h1 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 4.1rem;
+            font-weight: 700;
+            color: #f8c146;
+            margin-bottom: 20px;
+            text-shadow: 0 3px 6px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-section p {
+            font-size: 1.4rem;
+            max-width: 900px;
+            margin: 0 auto;
+            color: #e0e0e0;
+        }
+
+        .hero-section .cta-btn {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 14px 40px;
+            background: linear-gradient(45deg, #f8c146, #ffdd66);
+            color: #2c2c2c;
+            font-weight: 600;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .hero-section .cta-btn:hover {
+            transform: scale(1.1) rotate(3deg); /* Unique hover rotation */
+            box-shadow: 0 6px 20px rgba(248, 193, 70, 0.5);
+        }
+
+        /* Electronics Overview Section */
+        .electronics-overview-section {
+            padding: 80px 0;
+            background: #ffffff;
+            color: #2c2c2c;
+            position: relative;
+        }
+
+        .electronics-overview-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://images.unsplash.com/photo-1517423440428-a5a00ad493e8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') no-repeat center/cover;
+            opacity: 0.1;
+            z-index: 0;
+        }
+
+        .electronics-overview-section .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .electronics-overview-section h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #f8c146;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .electronics-overview-section .content-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .electronics-overview-section .text-content {
+            background: rgba(44, 44, 44, 0.9);
+            padding: 25px;
+            border-radius: 12px;
+            border: 1px solid #f8c146;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .electronics-overview-section .text-content:hover {
+            transform: translateY(-5px);
+        }
+
+        .electronics-overview-section .image-content img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+
+.electronics-overview-section .stats-grid {
+    display: flex;
+    flex-wrap: wrap;              /* Allow wrapping on smaller screens */
+    justify-content: center;      /* Center items horizontally */
+    /* gap: 20px;                    Space between boxes */
+    padding: 20px 0;              /* Optional: spacing around the grid */
+    margin-top: -100px;
+}
+
+.electronics-overview-section .stat-box {
+    flex: 1 1 250px;              /* Grow, shrink, base width */
+    max-width: 300px;            /* Limit max width */
+    background: rgba(26, 43, 71, 0.9);
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    border: 2px dashed #f8c146;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.electronics-overview-section .stat-box:hover {
+    transform: scale(1.05);
+    background: rgba(44, 44, 44, 0.9);
+}
+
+.electronics-overview-section .stat-box::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: #f8c146;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease;
+}
+
+.electronics-overview-section .stat-box:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.electronics-overview-section .stat-box h3 {
+    font-size: 1.9rem;
+    color: #f8c146;
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 1;
+}
+
+.electronics-overview-section .stat-box p {
+    font-size: 1rem;
+    color: #e0e0e0;
+    position: relative;
+    z-index: 1;
+}
+
+/* Optional: Improve spacing on very small screens */
+@media (max-width: 480px) {
+    .electronics-overview-section .stat-box {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}
+
+
+        /* Electronics Categories Section */
+        .electronics-categories-section {
+            padding: 80px 0;
+            background: #2c2c2c;
+        }
+
+        .electronics-categories-section h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #f8c146;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .electronics-categories-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .electronics-categories-section ul li {
+            font-size: 1rem;
+            color: #e0e0e0;
+            margin-bottom: 12px;
+            position: relative;
+            padding-left: 25px;
+        }
+
+        .electronics-categories-section ul li::before {
+            content: '✔';
+            position: absolute;
+            left: 0;
+            color: #f8c146;
+            font-size: 1.2rem;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 992px) {
+            .hero-section {
+                padding: 100px 0;
+            }
+
+            .hero-section h1 {
+                font-size: 3.3rem;
+            }
+
+            .hero-section p {
+                font-size: 1.2rem;
+            }
+
+            .electronics-overview-section, .electronics-categories-section {
+                padding: 60px 0;
+            }
+
+            .electronics-overview-section .content-wrapper {
+                grid-template-columns: 1fr;
+            }
+
+            .electronics-overview-section h2, .electronics-categories-section h2 {
+                font-size: 2.2rem;
+            }
+
+            .electronics-overview-section .stats-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero-section {
+                padding: 80px 0;
+            }
+
+            .hero-section h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-section p {
+                font-size: 1rem;
+            }
+
+            .electronics-overview-section, .electronics-categories-section {
+                padding: 40px 0;
+            }
+
+            .electronics-overview-section h2, .electronics-categories-section h2 {
+                font-size: 1.8rem;
+            }
+
+            .electronics-categories-section ul li {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand animate__animated animate__pulse" href="../index.html">MS Data ProDocs PVT</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link animate__animated" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link animate__animated" href="../AboutUs.html">About Us</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle animate__animated active" href="#" id="mailingLists" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Mailing Lists
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="mailingLists">
+                            <li><a class="dropdown-item animate__animated" href="agriculture-industry.html">Agriculture Industry Lists</a></li>
+                            <li><a class="dropdown-item animate__animated" href="it-industry.html">IT Industry Lists</a></li>
+                            <li><a class="dropdown-item animate__animated" href="mining-industry.html">Mining Industry Lists</a></li>
+                            <li><a class="dropdown-item animate__animated" href="construction-industry.html">Construction Industry Lists</a></li>
+                            <li><a class="dropdown-item animate__animated" href="manufacturing-industry.html">Manufacturing Industry Lists</a></li>
+                            <li><a class="dropdown-item animate__animated" href="transportation-industry.html">Transportation Industry Lists</a></li>
+                            <li><a class="dropdown-item animate__animated" href="wholesale-trade-industry.html">Wholesale Trade Industry Lists</a></li>
+                            <li><a class="dropdown-item animate__animated" href="retail-industry.html">Retail Industry Lists</a></li>
+                            <li><a class="dropdown-item animate__animated" href="financial-services.html">Financial Services Lists</a></li>
+                            <li><a class="dropdown-item animate__animated" href="business-services.html">Business Services Industry Lists</a></li>
+                            <li><a class="dropdown-item animate__animated" href="textile-apparel-industry.html">Textile & Apparel Industry Lists</a></li>
+                            <li><a class="dropdown-item animate__animated active" href="electronics-industry.html">Electronics Industry Lists</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle animate__animated" href="#" id="emailContacts" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Email Contacts
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="emailContacts">
+                            <li><a class="dropdown-item animate__animated" href="../EmailContacts/by-industry.html">By Industry</a></li>
+                            <li><a class="dropdown-item animate__animated" href="../EmailContacts/by-job-title.html">By Job Title</a></li>
+                            <li><a class="dropdown-item animate__animated" href="../EmailContacts/technology-lists.html">Technology Lists</a></li>
+                            <li><a class="dropdown-item animate__animated" href="../EmailContacts/healthcare-lists.html">Healthcare Email Lists</a></li>
+                            <li><a class="dropdown-item animate__animated" href="../EmailContacts/executives-email.html">Executives Email List</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle animate__animated" href="#" id="dataServices" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Data Services
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="dataServices">
+                            <li><a class="dropdown-item animate__animated" href="../DataServices/email-appending.html">Email Appending</a></li>
+                            <li><a class="dropdown-item animate__animated" href="../DataServices/email-validation.html">Email Validation</a></li>
+                            <li><a class="dropdown-item animate__animated" href="../DataServices/data-cleansing.html">Data Cleansing</a></li>
+                            <li><a class="dropdown-item animate__animated" href="../DataServices/data-enhancement.html">Data Enhancement</a></li>
+                            <li><a class="dropdown-item animate__animated" href="../DataServices/lead-management.html">Lead Management</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link animate__animated" href="../buyer-supplier.html">Buyer-Supplier</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link animate__animated" href="../contact.html">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div id="particles-js"></div>
+        <div class="container">
+            <h1 data-animate="fadeInDown">Electronics Industry Mailing Lists</h1>
+            <p data-animate="fadeInUp" data-delay="0.2">Target decision-makers in consumer electronics, components, and high-tech manufacturing with our verified mailing lists for impactful B2B campaigns.</p>
+            <a href="../contact.html" class="cta-btn" data-animate="fadeInUp" data-delay="0.4">Explore Electronics Contacts</a>
+        </div>
+    </section>
+
+    <!-- Electronics Overview Section -->
+    <section class="electronics-overview-section">
+        <div class="container">
+            <h2 data-animate="fadeIn">Connect with Electronics Industry Leaders</h2>
+            <div class="content-wrapper" data-animate="fadeInUp">
+                <div class="text-content text-white">
+                    <p>Our Electronics Industry Mailing Lists provide access to executives in consumer electronics, electronic components, and high-tech manufacturing. This dynamic, multichannel database supports direct mail, email, and telemarketing campaigns, enabling you to connect with key decision-makers and identify industry trends.</p>
+                    <p>Maximize your outreach with targeted selects for precise and effective marketing.</p>
+                </div>
+                <div class="image-content">
+                    <img src="https://images.unsplash.com/photo-1517070208541-6ddc4d3efbcb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Electronics Industry" />
+                </div>
+            </div>
+            <div class="stats-grid" data-animate="fadeInRight">
+                <div class="stat-box">
+                    <h3>1,600,000+</h3>
+                    <p>Total Companies</p>
+                </div>
+                <div class="stat-box">
+                    <h3>19,850,000+</h3>
+                    <p>Est. Employment</p>
+                </div>
+                <div class="stat-box">
+                    <h3>SIC 50-65</h3>
+                    <p>Industry Codes</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Electronics Categories Section -->
+    <section class="electronics-categories-section">
+        <div class="container">
+            <h2 data-animate="fadeIn">Explore Electronics Industry Categories</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <ul data-animate="fadeInUp" data-delay="0.2">
+                        <li>Consumer Electronics (Manufacturing) Mailing List</li>
+                        <li>Electronic Components Mailing List</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <ul data-animate="fadeInUp" data-delay="0.4">
+                        <li>Electronics Wholesale Email List</li>
+                        <li>High-Tech Electrical Industry Email Lists</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 mb-4">
+                    <h5 style="text-decoration: underline; color: #ffd000;">Address</h5>
+                    <p>MS Data ProDocs PVT,<br>1002 South Center Street #4296,<br>North America, MT 59230</p>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5 style="text-decoration: underline; color: #ffd000;">Industry Mailing Lists</h5>
+                    <ul class="list-unstyled">
+                        <li>Construction Industry Lists</li>
+                        <li>Manufacturing Industry Lists</li>
+                        <li>Mining Industry Lists</li>
+                        <li>Transportation Industry Lists</li>
+                        <li>Oil and Gas Mailing List</li>
+                        <li>Banking and Finance Email List</li>
+                        <li>Retail Industry Lists</li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5 style="text-decoration: underline; color: #ffd000;">Healthcare Lists</h5>
+                    <ul class="list-unstyled">
+                        <li>Medical Mailing List</li>
+                        <li>Physician Email List</li>
+                        <li>Dentist Email List</li>
+                        <li>Doctors Email List</li>
+                        <li>Physical Therapy List</li>
+                        <li>Practitioner</li>
+                        <li>Nurse Practitioner</li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5 style="text-decoration: underline; color: #ffd000;">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="../AboutUs.html">About Us</a></li>
+                        <li><a href="../privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="../terms-of.html">Terms</a></li>
+                    </ul>
+                    <h5>Contact Us</h5>
+                    <p>Phone: +1 406-780-500</p>
+                    <p>Email: <a href="mailto:info@msdataprodocs.org">info@msdataprodocs.org</a></p>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                © 2025 MS Data ProDocs. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JS for Navbar Animation -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const navLinks = document.querySelectorAll('.nav-link, .dropdown-item');
+            navLinks.forEach(link => {
+                link.addEventListener('mouseover', () => {
+                    link.classList.add('animate__pulse');
+                });
+                link.addEventListener('animationend', () => {
+                    link.classList.remove('animate__pulse');
+                });
+            });
+        });
+    </script>
+
+    <!-- Particles.js Configuration -->
+    <script>
+        particlesJS('particles-js', {
+            particles: {
+                number: { value: 90, density: { enable: true, value_area: 850 } },
+                color: { value: '#f8c146' },
+                shape: { type: 'polygon' }, /* Unique shape */
+                opacity: { value: 0.5, random: true },
+                size: { value: 3, random: true },
+                line_linked: { enable: true, distance: 140, color: '#f8c146', opacity: 0.2, width: 1 },
+                move: { enable: true, speed: 5, direction: 'none', random: true }
+            },
+            interactivity: {
+                detect_on: 'canvas',
+                events: { onhover: { enable: true, mode: 'repulse' }, onclick: { enable: true, mode: 'push' } }, /* Unique interaction */
+                modes: { repulse: { distance: 120 }, push: { particles_nb: 5 } }
+            },
+            retina_detect: true
+        });
+    </script>
+
+    <!-- GSAP Animations -->
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Hero Section
+        gsap.from(".hero-section h1", {
+            opacity: 0,
+            x: -200,
+            scale: 0.6,
+            duration: 1.5,
+            ease: "power4.out", /* Smooth slide-in */
+            scrollTrigger: { trigger: ".hero-section", start: "top 80%" }
+        });
+
+        gsap.from(".hero-section p", {
+            opacity: 0,
+            x: 200,
+            scale: 0.6,
+            duration: 1.5,
+            delay: 0.3,
+            ease: "power4.out",
+            scrollTrigger: { trigger: ".hero-section", start: "top 80%" }
+        });
+
+        gsap.from(".hero-section .cta-btn", {
+            opacity: 0,
+            scale: 0.2,
+            duration: 1,
+            delay: 0.5,
+            ease: "elastic.out(1, 0.5)", /* Bouncy pop-in */
+            scrollTrigger: { trigger: ".hero-section", start: "top 80%" }
+        });
+
+        // Electronics Overview Section
+        gsap.from(".electronics-overview-section h2", {
+            opacity: 0,
+            y: -50,
+            duration: 1,
+            ease: "bounce.out", /* Bouncy entrance */
+            scrollTrigger: { trigger: ".electronics-overview-section", start: "top 80%" }
+        });
+
+        gsap.from(".electronics-overview-section .text-content", {
+            opacity: 0,
+            x: -100,
+            duration: 1.2,
+            ease: "power3.out",
+            scrollTrigger: { trigger: ".electronics-overview-section", start: "top 80%" }
+        });
+
+        gsap.from(".electronics-overview-section .image-content", {
+            opacity: 0,
+            x: 100,
+            duration: 1.2,
+            delay: 0.4,
+            ease: "power3.out",
+            scrollTrigger: { trigger: ".electronics-overview-section", start: "top 80%" }
+        });
+
+        gsap.from(".electronics-overview-section .stat-box", {
+            opacity: 0,
+            y: 100,
+            scale: 0.8,
+            duration: 1,
+            stagger: 0.3,
+            ease: "power2.out", /* Smooth slide-up with scale */
+            scrollTrigger: { trigger: ".electronics-overview-section", start: "top 80%" }
+        });
+
+        // Electronics Categories Section
+        gsap.from(".electronics-categories-section h2", {
+            opacity: 0,
+            scale: 0.7,
+            duration: 1,
+            ease: "elastic.out(1, 0.6)",
+            scrollTrigger: { trigger: ".electronics-categories-section", start: "top 80%" }
+        });
+
+        gsap.from(".electronics-categories-section ul li", {
+            opacity: 0,
+            x: (index) => (index % 2 === 0 ? -30 : 30), /* Alternate slide */
+            duration: 0.8,
+            stagger: 0.2,
+            ease: "power2.inOut",
+            scrollTrigger: { trigger: ".electronics-categories-section", start: "top 80%" }
+        });
+    </script>
+</body>
+</html>

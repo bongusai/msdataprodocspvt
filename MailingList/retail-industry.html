@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MS Data ProDocs PVT offers Retail Industry Mailing Lists to target decision-makers in retail sectors like lumber, paint, hardware, grocery, and more for effective B2B marketing campaigns.">
+    <meta name="keywords" content="retail industry mailing lists, retail trade, B2B marketing, email marketing, telemarketing">
+    <meta name="author" content="MS Data ProDocs PVT">
+    <meta name="title" content="Retail Industry Mailing Lists - MS Data ProDocs PVT">
+    <title>Retail Industry Mailing Lists - MS Data ProDocs PVT</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <!-- GSAP for Animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <!-- Particles.js for Particle Effects -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+    <!-- Custom CSS for Navbar -->
+    <link rel="stylesheet" href="../navbar.css">
+
+    <!-- Custom CSS for Footer -->
+    <link rel="stylesheet" href="../footer.css">
+
+    <!-- Inline CSS for Unique Body Content -->
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #e0e0e0;
+            overflow-x: hidden;
+            background: linear-gradient(180deg, #2c2c2c 0%, #1a3c34 100%); /* Same color scheme */
+        }
+
+        /* Active Nav Link */
+        .active {
+            color: #f8c146 !important;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            position: relative;
+            padding: 120px 0;
+            color: white;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .hero-section #particles-js {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            background: linear-gradient(135deg, rgba(44, 44, 44, 0.9), rgba(26, 60, 52, 0.9)), url('https://via.placeholder.com/1920x1080?text=Retail+Industry+Background');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero-section .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-section h1 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 3.8rem;
+            font-weight: 700;
+            color: #f8c146;
+            margin-bottom: 25px;
+            text-shadow: 0 3px 6px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-section p {
+            font-size: 1.4rem;
+            max-width: 900px;
+            margin: 0 auto;
+            color: #ffffff;
+        }
+
+        .hero-section .cta-btn {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 12px 35px;
+            background: linear-gradient(45deg, #f8c146, #ffdd66);
+            color: #2c2c2c;
+            font-weight: 600;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .hero-section .cta-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(248, 193, 70, 0.5);
+        }
+
+        /* Retail Overview Section */
+        .retail-overview-section {
+            padding: 70px 0;
+            background-image: linear-gradient(180deg,#1a3c34, #c7c7c7, #1a3c34a6);
+            color: #c9cdcf;
+            position: relative;
+        }
+
+        .retail-overview-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://via.placeholder.com/1920x1080?text=Retail+Parallax') no-repeat center/cover;
+            opacity: 0.1;
+            z-index: 0;
+        }
+
+        .retail-overview-section .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .retail-overview-section h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #f8c146;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .retail-overview-section .info-box {
+            background: rgba(44, 44, 44, 0.85);
+            padding: 25px;
+            border-radius: 12px;
+            border: 2px solid #f8c146;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
+            color: white;
+        }
+
+        .retail-overview-section .info-box:hover {
+            transform: translateY(-5px);
+        }
+
+        .retail-overview-section .stats-row {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+
+        .retail-overview-section .stat-item {
+            text-align: center;
+            padding: 15px;
+        }
+
+        .retail-overview-section .stat-item h3 {
+            font-size: 2rem;
+            color: #f8c146;
+            margin-bottom: 10px;
+        }
+
+        .retail-overview-section .stat-item p {
+            font-size: 1rem;
+            color: #000000;
+        }
+
+        /* Retail Categories Section */
+        .retail-categories-section {
+            padding: 70px 0;
+            background: #2c2c2c;
+        }
+
+        .retail-categories-section h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #f8c146;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .retail-categories-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .retail-categories-section ul li {
+            font-size: 1rem;
+            color: #e0e0e0;
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 25px;
+        }
+
+        .retail-categories-section ul li::before {
+            content: '✔';
+            position: absolute;
+            left: 0;
+            color: #f8c146;
+            font-size: 1.2rem;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 992px) {
+            .hero-section {
+                padding: 90px 0;
+            }
+
+            .hero-section h1 {
+                font-size: 3rem;
+            }
+
+            .hero-section p {
+                font-size: 1.2rem;
+            }
+
+            .retail-overview-section, .retail-categories-section {
+                padding: 50px 0;
+            }
+
+            .retail-overview-section h2, .retail-categories-section h2 {
+                font-size: 2.2rem;
+            }
+
+            .retail-overview-section .stats-row {
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero-section {
+                padding: 70px 0;
+            }
+
+            .hero-section h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero-section p {
+                font-size: 1rem;
+            }
+
+            .retail-overview-section, .retail-categories-section {
+                padding: 40px 0;
+            }
+
+            .retail-overview-section h2, .retail-categories-section h2 {
+                font-size: 1.8rem;
+            }
+
+            .retail-categories-section ul li {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand animate__animated animate__pulse" href="../index.html">MS Data ProDocs PVT</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link animate__animated" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link animate__animated" href="../AboutUs.html">About Us</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle animate__animated active" href="#" id="mailingLists" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Mailing Lists
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="mailingLists">
+                            <li><a class="dropdown-item animate__animated" href="agriculture-industry.html">Agriculture Industry Lists</a></li>
+                            <li><a class="dropdown-item animate__animated" href="it-industry.html">IT Industry Lists</a></li>
+                            <li><a class="dropdown-item animate__animated" href="mining-industry.html">Mining Industry Lists</a></li>
+                            <li><a class="dropdown-item animate__animated" href="construction-industry.html">Construction Industry Lists</a></li>
+                            <li><a class="dropdown-item animate__animated" href="manufacturing-industry.html">Manufacturing Industry Lists</a></li>
+                            <li><a class="dropdown-item animate__animated" href="transportation-industry.html">Transportation Industry Lists</a></li>
+                            <li><a class="dropdown-item animate__animated" href="wholesale-trade-industry.html">Wholesale Trade Industry Lists</a></li>
+                            <li><a class="dropdown-item animate__animated active" href="retail-industry.html">Retail Industry Lists</a></li>
+                            <li><a class="dropdown-item animate__animated" href="financial-services.html">Financial Services Lists</a></li>
+                            <li><a class="dropdown-item animate__animated" href="business-services.html">Business Services Industry Lists</a></li>
+                            <li><a class="dropdown-item animate__animated" href="textile-apparel-industry.html">Textile & Apparel Industry Lists</a></li>
+                            <li><a class="dropdown-item animate__animated" href="electronics-industry.html">Electronics Industry Lists</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle animate__animated" href="#" id="emailContacts" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Email Contacts
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="emailContacts">
+                            <li><a class="dropdown-item animate__animated" href="../EmailContacts/by-industry.html">By Industry</a></li>
+                            <li><a class="dropdown-item animate__animated" href="../EmailContacts/by-job-title.html">By Job Title</a></li>
+                            <li><a class="dropdown-item animate__animated" href="../EmailContacts/technology-lists.html">Technology Lists</a></li>
+                            <li><a class="dropdown-item animate__animated" href="../EmailContacts/healthcare-lists.html">Healthcare Email Lists</a></li>
+                            <li><a class="dropdown-item animate__animated" href="../EmailContacts/executives-email.html">Executives Email List</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle animate__animated" href="#" id="dataServices" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Data Services
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="dataServices">
+                            <li><a class="dropdown-item animate__animated" href="../DataServices/email-appending.html">Email Appending</a></li>
+                            <li><a class="dropdown-item animate__animated" href="../DataServices/email-validation.html">Email Validation</a></li>
+                            <li><a class="dropdown-item animate__animated" href="../DataServices/data-cleansing.html">Data Cleansing</a></li>
+                            <li><a class="dropdown-item animate__animated" href="../DataServices/data-enhancement.html">Data Enhancement</a></li>
+                            <li><a class="dropdown-item animate__animated" href="../DataServices/lead-management.html">Lead Management</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link animate__animated" href="../buyer-supplier.html">Buyer-Supplier</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link animate__animated" href="../contact.html">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div id="particles-js"></div>
+        <div class="container">
+            <h1 data-animate="fadeInDown">Retail Industry Mailing Lists</h1>
+            <p data-animate="fadeInUp" data-delay="0.2">Engage decision-makers in retail trade sectors like lumber, hardware, grocery, and department stores with our verified mailing lists for impactful B2B campaigns.</p>
+            <a href="../contact.html" class="cta-btn" data-animate="fadeInUp" data-delay="0.4">Explore Retail Contacts</a>
+        </div>
+    </section>
+
+    <!-- Retail Overview Section -->
+    <section class="retail-overview-section">
+        <div class="container">
+            <h2 data-animate="fadeIn">Reach Retail Industry Decision-Makers</h2>
+            <div class="info-box" data-animate="fadeInUp">
+                <p>Our Retail Industry Mailing Lists provide access to executives in establishments selling merchandise for personal or household consumption, including lumber, paint, hardware, and grocery stores. With verified contact details, our database supports direct mail, email, and telemarketing campaigns, ensuring high responsiveness to your products and services.</p>
+                <p>Customize your outreach with targeted selects and geographic data for precise, effective marketing.</p>
+            </div>
+            <div class="stats-row" data-animate="fadeInRight">
+                <div class="stat-item">
+                    <h3>3,050,000+</h3>
+                    <p>Total Companies</p>
+                </div>
+                <div class="stat-item">
+                    <h3>950,000+</h3>
+                    <p>Est. Employment</p>
+                </div>
+                <div class="stat-item">
+                    <h3>SIC 52-59</h3>
+                    <p>Industry Codes</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Retail Categories Section -->
+    <section class="retail-categories-section">
+        <div class="container">
+            <h2 data-animate="fadeIn">Explore Retail Industry Categories</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <ul data-animate="fadeInUp" data-delay="0.2">
+                        <li>Lumber and Other Building Materials Dealers Mailing List</li>
+                        <li>Paint, Glass, and Wallpaper Stores Mailing List</li>
+                        <li>Hardware Stores Mailing List</li>
+                        <li>Retail Nurseries, Lawn and Garden Supply Stores Mailing List</li>
+                        <li>Mobile Home Dealers Mailing List</li>
+                        <li>Department Stores Mailing List</li>
+                        <li>Variety Stores Mailing List</li>
+                        <li>Miscellaneous General Merchandise Stores Mailing List</li>
+                        <li>Grocery Stores Mailing List</li>
+                        <li>Fruit and Vegetable Markets Mailing List</li>
+                        <li>Candy, Nut, and Confectionery Stores Mailing List</li>
+                        <li>Dairy Products Stores Mailing List</li>
+                        <li>Auto and Home Supply Stores Mailing List</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <ul data-animate="fadeInUp" data-delay="0.4">
+                        <li>Boat Dealers Mailing List</li>
+                        <li>Recreational Vehicle Dealers Mailing List</li>
+                        <li>Women's Clothing Stores Mailing List</li>
+                        <li>Family Clothing Stores Mailing List</li>
+                        <li>Home Furniture and Furnishings Stores Mailing List</li>
+                        <li>Household Appliance Stores Mailing List</li>
+                        <li>Eating and Drinking Places Mailing List</li>
+                        <li>Drug Stores and Proprietary Stores Mailing List</li>
+                        <li>Liquor Stores Mailing List</li>
+                        <li>Miscellaneous Shopping Goods Stores Mailing List</li>
+                        <li>Retail Bakeries Mailing List</li>
+                        <li>Motor Vehicle Dealers (New and Used) Mailing List</li>
+                        <li>Motor Vehicle Dealers (Used Only) Mailing List</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 mb-4">
+                    <h5 style="text-decoration: underline; color: #ffd000;">Address</h5>
+                    <p>MS Data ProDocs PVT,<br>1002 South Center Street #4296,<br>North America, MT 59230</p>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5 style="text-decoration: underline; color: #ffd000;">Industry Mailing Lists</h5>
+                    <ul class="list-unstyled">
+                        <li>Construction Industry Lists</li>
+                        <li>Manufacturing Industry Lists</li>
+                        <li>Mining Industry Lists</li>
+                        <li>Transportation Industry Lists</li>
+                        <li>Oil and Gas Mailing List</li>
+                        <li>Banking and Finance Email List</li>
+                        <li>Retail Industry Lists</li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5 style="text-decoration: underline; color: #ffd000;">Healthcare Lists</h5>
+                    <ul class="list-unstyled">
+                        <li>Medical Mailing List</li>
+                        <li>Physician Email List</li>
+                        <li>Dentist Email List</li>
+                        <li>Doctors Email List</li>
+                        <li>Physical Therapy List</li>
+                        <li>Practitioner</li>
+                        <li>Nurse Practitioner</li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5 style="text-decoration: underline; color: #ffd000;">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="../AboutUs.html">About Us</a></li>
+                        <li><a href="../privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="../terms-of.html">Terms</a></li>
+                    </ul>
+                    <h5>Contact Us</h5>
+                    <p>Phone: +1 406-780-500</p>
+                    <p>Email: <a href="mailto:info@msdataprodocs.org">info@msdataprodocs.org</a></p>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                © 2025 MS Data ProDocs. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JS for Navbar Animation -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const navLinks = document.querySelectorAll('.nav-link, .dropdown-item');
+            navLinks.forEach(link => {
+                link.addEventListener('mouseover', () => {
+                    link.classList.add('animate__pulse');
+                });
+                link.addEventListener('animationend', () => {
+                    link.classList.remove('animate__pulse');
+                });
+            });
+        });
+    </script>
+
+    <!-- Particles.js Configuration -->
+    <script>
+        particlesJS('particles-js', {
+            particles: {
+                number: { value: 50, density: { enable: true, value_area: 800 } },
+                color: { value: '#f8c146' },
+                shape: { type: 'circle' },
+                opacity: { value: 0.5, random: true },
+                size: { value: 3, random: true },
+                line_linked: { enable: true, distance: 150, color: '#f8c146', opacity: 0.2, width: 1 },
+                move: { enable: true, speed: 2, direction: 'none', random: true }
+            },
+            interactivity: {
+                detect_on: 'canvas',
+                events: { onhover: { enable: true, mode: 'repulse' }, onclick: { enable: false } },
+                modes: { repulse: { distance: 100, duration: 0.4 } }
+            },
+            retina_detect: true
+        });
+    </script>
+
+    <!-- GSAP Animations -->
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Hero Section
+        gsap.from(".hero-section h1", {
+            opacity: 0,
+            y: -50,
+            scale: 0.8,
+            duration: 1.2,
+            ease: "power3.out",
+            scrollTrigger: { trigger: ".hero-section", start: "top 80%" }
+        });
+
+        gsap.from(".hero-section p", {
+            opacity: 0,
+            y: 50,
+            duration: 1,
+            delay: 0.3,
+            ease: "power3.out",
+            scrollTrigger: { trigger: ".hero-section", start: "top 80%" }
+        });
+
+        gsap.from(".hero-section .cta-btn", {
+            opacity: 0,
+            y: 50,
+            duration: 1,
+            delay: 0.5,
+            ease: "power3.out",
+            scrollTrigger: { trigger: ".hero-section", start: "top 80%" }
+        });
+
+        // Retail Overview Section
+        gsap.from(".retail-overview-section h2", {
+            opacity: 0,
+            y: -30,
+            duration: 0.8,
+            ease: "power3.out",
+            scrollTrigger: { trigger: ".retail-overview-section", start: "top 80%" }
+        });
+
+        gsap.from(".retail-overview-section .info-box", {
+            opacity: 0,
+            y: 50,
+            duration: 1,
+            ease: "power3.out",
+            scrollTrigger: { trigger: ".retail-overview-section", start: "top 80%" }
+        });
+
+        gsap.from(".retail-overview-section .stat-item", {
+            opacity: 0,
+            y: 50,
+            duration: 0.8,
+            stagger: 0.2,
+            ease: "back.out(1.7)",
+            scrollTrigger: { trigger: ".retail-overview-section", start: "top 80%" }
+        });
+
+        // Retail Categories Section
+        gsap.from(".retail-categories-section h2", {
+            opacity: 0,
+            y: -30,
+            duration: 0.8,
+            ease: "power3.out",
+            scrollTrigger: { trigger: ".retail-categories-section", start: "top 80%" }
+        });
+
+        gsap.from(".retail-categories-section ul", {
+            opacity: 0,
+            y: 50,
+            duration: 0.8,
+            stagger: 0.2,
+            ease: "power3.out",
+            scrollTrigger: { trigger: ".retail-categories-section", start: "top 80%" }
+        });
+    </script>
+</body>
+</html>

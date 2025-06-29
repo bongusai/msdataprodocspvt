@@ -1,0 +1,50 @@
+/* Footer Styling */
+footer {
+    background-color: #000000; /* Black background */
+    color: white;
+    padding: 40px 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+footer h5 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+footer p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+footer a {
+    color: #ff6f61; /* Coral color to match existing design */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #e55a50; /* Darker coral on hover */
+    text-decoration: underline;
+}
+
+footer ul.list-unstyled li {
+    margin-bottom: 8px;
+}
+
+footer ul.list-unstyled li a {
+    font-size: 0.95rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    footer h5 {
+        font-size: 1.1rem;
+    }
+
+    footer p,
+    footer ul.list-unstyled li a {
+        font-size: 0.9rem;
+    }
+}

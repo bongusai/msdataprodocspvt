@@ -1,0 +1,1117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MS Data ProDocs PVT offers industry-specific email lists to boost lead generation and sales, targeting professionals across thousands of industries and occupational titles.">
+    <meta name="keywords" content="industry email lists, B2B email marketing, lead generation, service industry, professional email lists">
+    <meta name="author" content="MS Data ProDocs PVT">
+    <title>Industry-Specific Email Lists - MS Data ProDocs PVT</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <!-- GSAP for Animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <!-- Custom CSS for Navbar -->
+    <link rel="stylesheet" href="../navbar.css">
+
+    <!-- Custom CSS for Footer -->
+    <link rel="stylesheet" href="../footer.css">
+
+    <!-- Inline CSS for Content -->
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            overflow-x: hidden;
+            background-color: #f8f9fa; /* Subpage background */
+        }
+
+        /* Active Nav Link */
+        .active {
+            color: #f8c146 !important;
+        }
+
+        /* Intro Section */
+        .intro-section {
+            background: linear-gradient(135deg, #1a3c34, #30b8b1);
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .intro-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://via.placeholder.com/1920x1080?text=Industry+Email+Lists+Background') no-repeat center/cover;
+            opacity: 0.15;
+            z-index: 0;
+        }
+
+        .intro-section .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .intro-section h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        .intro-section p {
+            font-size: 1.3rem;
+            max-width: 800px;
+            margin: 0 auto;
+            opacity: 0.9;
+        }
+
+        /* Overview Section */
+        .overview-section {
+            padding: 80px 0;
+            background-color: #ffffff;
+        }
+
+        .overview-section h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #1a3c34;
+            margin-bottom: 20px;
+        }
+
+        .overview-section p {
+            font-size: 1.1rem;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .overview-section img {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Industries Section (Filterable Card Grid) */
+        .industries-section {
+            padding: 80px 0;
+            background-color: #f8f9fa;
+        }
+
+        .industries-section h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #1a3c34;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .filter-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 40px;
+        }
+
+        .filter-btn {
+            background: #1a3c34;
+            color: #f8c146;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .filter-btn:hover {
+            background: #f8c146;
+            color: #1a3c34;
+            transform: translateY(-2px);
+        }
+
+        .filter-btn.active {
+            background: #f8c146;
+            color: #1a3c34 !important;
+        }
+
+        .industry-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .industry-card {
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+
+        .industry-card.hidden {
+            display: none;
+        }
+
+        .industry-card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .industry-card-content {
+            padding: 20px;
+        }
+
+        .industry-card h4 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #1a3c34;
+            margin-bottom: 10px;
+        }
+
+        .industry-card ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .industry-card li {
+            font-size: 0.95rem;
+            color: #555;
+            margin-bottom: 5px;
+        }
+
+        .industry-card li::before {
+            content: '•';
+            color: #f8c146;
+            margin-right: 8px;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 992px) {
+            .intro-section {
+                padding: 80px 0;
+            }
+
+            .intro-section h1 {
+                font-size: 2.8rem;
+            }
+
+            .intro-section p {
+                font-size: 1.1rem;
+            }
+
+            .overview-section, .industries-section {
+                padding: 60px 0;
+            }
+
+            .overview-section h2, .industries-section h2 {
+                font-size: 2.2rem;
+            }
+
+            .overview-section img {
+                height: 250px;
+            }
+
+            .industry-grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            }
+        }
+
+        @media (max-width: 576px) {
+            .intro-section {
+                padding: 60px 0;
+            }
+
+            .intro-section h1 {
+                font-size: 2rem;
+            }
+
+            .intro-section p {
+                font-size: 1rem;
+            }
+
+            .overview-section, .industries-section {
+                padding: 40px 0;
+            }
+
+            .overview-section h2, .industries-section h2 {
+                font-size: 1.8rem;
+            }
+
+            .overview-section img {
+                height: 200px;
+                margin-bottom: 20px;
+            }
+
+            .filter-btn {
+                padding: 8px 15px;
+                font-size: 0.9rem;
+            }
+
+            .industry-card img {
+                height: 120px;
+            }
+
+            .industry-card-content {
+                padding: 15px;
+            }
+
+            .industry-card h4 {
+                font-size: 1.2rem;
+            }
+
+            .industry-card li {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar (Updated, with active class for Email Contacts and By Industry) -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand animate__animated animate__pulse" href="../index.html">MS Data ProDocs PVT</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link animate__animated" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link animate__animated" href="../AboutUs.html">About Us</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle animate__animated" href="#" id="mailingLists" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Mailing Lists
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="mailingLists">
+                            <li><a class="dropdown-item animate__animated" href="../MailingList/agriculture-industry.html">Agriculture Industry Lists</a></li>
+                            <li><a class="dropdown-item animate__animated" href="../MailingList/it-industry.html">IT Industry Lists</a></li>
+                            <li><a class="dropdown-item animate__animated" href="../MailingList/mining-industry.html">Mining Industry Lists</a></li>
+                            <li><a class="dropdown-item animate__animated" href="../MailingList/construction-industry.html">Construction Industry Lists</a></li>
+                            <li><a class="dropdown-item animate__animated" href="../MailingList/manufacturing-industry.html">Manufacturing Industry Lists</a></li>
+                            <li><a class="dropdown-item animate__animated" href="../MailingList/transportation-industry.html">Transportation Industry Lists</a></li>
+                            <li><a class="dropdown-item animate__animated" href="../MailingList/wholesale-trade-industry.html">Wholesale Trade Industry Lists</a></li>
+                            <li><a class="dropdown-item animate__animated" href="../MailingList/retail-industry.html">Retail Industry Lists</a></li>
+                            <li><a class="dropdown-item animate__animated" href="../MailingList/financial-services.html">Financial Services Lists</a></li>
+                            <li><a class="dropdown-item animate__animated" href="../MailingList/business-services.html">Business Services Industry Lists</a></li>
+                            <li><a class="dropdown-item animate__animated" href="../MailingList/textile-apparel-industry.html">Textile & Apparel Industry Lists</a></li>
+                            <li><a class="dropdown-item animate__animated" href="../MailingList/electronics-industry.html">Electronics Industry Lists</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle animate__animated active" href="#" id="emailContacts" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Email Contacts
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="emailContacts">
+                            <li><a class="dropdown-item animate__animated active" href="by-industry.html">By Industry</a></li>
+                            <li><a class="dropdown-item animate__animated" href="by-job-title.html">By Job Title</a></li>
+                            <li><a class="dropdown-item animate__animated" href="technology-lists.html">Technology Lists</a></li>
+                            <li><a class="dropdown-item animate__animated" href="healthcare-lists.html">Healthcare Lists</a></li>
+                            <li><a class="dropdown-item animate__animated" href="executives-email.html">Executives Email List</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle animate__animated" href="#" id="dataServices" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Data Services
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="dataServices">
+                            <li><a class="dropdown-item animate__animated" href="../DataServices/email-appending.html">Email Appending</a></li>
+                            <li><a class="dropdown-item animate__animated" href="../DataServices/email-validation.html">Email Validation</a></li>
+                            <li><a class="dropdown-item animate__animated" href="../DataServices/data-cleansing.html">Data Cleansing</a></li>
+                            <li><a class="dropdown-item animate__animated" href="../DataServices/data-enhancement.html">Data Enhancement</a></li>
+                            <li><a class="dropdown-item animate__animated" href="../DataServices/lead-management.html">Lead Management</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link animate__animated" href="../buyer-supplier.html">Buyer-Supplier</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link animate__animated" href="../contact.html">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Intro Section -->
+    <section class="intro-section">
+        <div class="container">
+            <h1 data-animate="fadeInDown">Industry-Specific Email Lists</h1>
+            <p data-animate="fadeInUp" data-delay="0.2">Target key professionals and decision-makers with our affordable, industry-specific email lists designed for effective B2B email marketing.</p>
+        </div>
+    </section>
+
+    <!-- Overview Section -->
+    <section class="overview-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6" data-animate="fadeInLeft">
+                    <h2>Boost Your Lead Generation</h2>
+                    <p>MS Data ProDocs PVT is a premier supplier of industry-specific email lists, specializing in boosting lead generation and sales for businesses of all sizes. Our email marketing experts work closely with you to identify, quantify, and target prospects, propelling your sales leads.</p>
+                    <p>Reach top professionals in the services industry, including hotels, health, legal, engineering, education, and more, with our efficient and targeted email lists.</p>
+                </div>
+                <div class="col-md-6" data-animate="fadeInRight">
+                    <img src="https://www.tdinsights.com/wp-content/uploads/2022/06/Industry-email-list-1.jpg" alt="Industry Email Lists" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industries Section (Filterable Card Grid) -->
+    <section class="industries-section">
+        <div class="container">
+            <h2 data-animate="fadeIn">Explore Our Industry Email Lists</h2>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="agriculture">Agriculture</button>
+                <button class="filter-btn" data-filter="architecture">Architecture</button>
+                <button class="filter-btn" data-filter="associations">Associations</button>
+                <button class="filter-btn" data-filter="automotive">Automotive</button>
+                <button class="filter-btn" data-filter="banking">Banking & Finance</button>
+                <button class="filter-btn" data-filter="business">Business Services</button>
+                <button class="filter-btn" data-filter="household">Household Goods</button>
+                <button class="filter-btn" data-filter="insurance">Insurance</button>
+                <button class="filter-btn" data-filter="transportation">Transportation</button>
+                <button class="filter-btn" data-filter="utilities">Utilities</button>
+                <button class="filter-btn" data-filter="wholesale">Wholesale</button>
+                <button class="filter-btn" data-filter="software">Software Services</button>
+                <button class="filter-btn" data-filter="chemical">Chemical</button>
+                <button class="filter-btn" data-filter="computer">Computer Products</button>
+                <button class="filter-btn" data-filter="construction">Construction</button>
+                <button class="filter-btn" data-filter="consumer">Consumer Goods</button>
+                <button class="filter-btn" data-filter="education">Education</button>
+                <button class="filter-btn" data-filter="electronics">Electronics</button>
+                <button class="filter-btn" data-filter="energy">Energy</button>
+                <button class="filter-btn" data-filter="environmental">Environmental</button>
+                <button class="filter-btn" data-filter="food">Food & Beverage</button>
+                <button class="filter-btn" data-filter="government">Government</button>
+                <button class="filter-btn" data-filter="packaging">Packaging</button>
+                <button class="filter-btn" data-filter="pet">Pet Care</button>
+                <button class="filter-btn" data-filter="pharmaceutical">Pharmaceutical</button>
+                <button class="filter-btn" data-filter="real-estate">Real Estate</button>
+                <button class="filter-btn" data-filter="retail">Retail</button>
+                <button class="filter-btn" data-filter="leisure">Leisure</button>
+                <button class="filter-btn" data-filter="machinery">Machinery</button>
+                <button class="filter-btn" data-filter="manufacturing">Manufacturing</button>
+                <button class="filter-btn" data-filter="media">Media</button>
+                <button class="filter-btn" data-filter="healthcare">Healthcare</button>
+                <button class="filter-btn" data-filter="mining">Mining</button>
+                <button class="filter-btn" data-filter="telecommunications">Telecommunications</button>
+            </div>
+            <div class="industry-grid">
+                <div class="industry-card" data-category="agriculture" data-animate="fadeInUp">
+                    <img src="https://modernagriculture.ca/wp-content/uploads/2017/06/crops.jpg" alt="Agriculture Email Lists">
+                    <div class="industry-card-content">
+                        <h4>Agriculture Mailing List</h4>
+                        <ul>
+                            <li>Crops Email List</li>
+                            <li>Farm Products Mailing List</li>
+                            <li>Livestock Email List</li>
+                            <li>Agricultural Services Email List</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="industry-card" data-category="architecture" data-animate="fadeInUp" data-delay="0.1">
+                    <img src="https://studyline.net/wp-content/uploads/2021/07/%D8%AA%D8%AE%D8%B5%D8%B5-%D9%87%D9%86%D8%AF%D8%B3%D8%A9-%D8%A7%D9%84%D8%B9%D9%85%D8%A7%D8%B1%D8%A9.jpg" alt="Architecture Email Lists">
+                    <div class="industry-card-content">
+                        <h4>Architecture, Engineering & Design</h4>
+                        <ul>
+                            <li>Architect Mailing List</li>
+                            <li>Building Designers Email List</li>
+                            <li>Construction-Consultants Email List</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="industry-card" data-category="associations" data-animate="fadeInUp" data-delay="0.2">
+                    <img src="https://mieuxdonner.org/wp-content/uploads/2024/11/association-caritative-1024x446.png" alt="Associations Email Lists">
+                    <div class="industry-card-content">
+                        <h4>Associations & Charities</h4>
+                        <ul>
+                            <li>Associations, Charities & Foundations Email List</li>
+                            <li>Chambers of Commerce Mailing List</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="industry-card" data-category="automotive" data-animate="fadeInUp" data-delay="0.3">
+                    <img src="https://newsroom.arm.com/wp-content/uploads/2024/03/newsroom-blogs_1600x900-1-1400x788.jpg" alt="Automotive Email Lists">
+                    <div class="industry-card-content">
+                        <h4>Automotive Industry</h4>
+                        <ul>
+                            <li>Automobile Dealers Mailing List</li>
+                            <li>Automobile Parts Stores Email List</li>
+                            <li>Automobile Service & Collision Repair Email List</li>
+                            <li>Automobiles (Manufacturing & Wholesale) Mailing Lists</li>
+                            <li>Automotive Parts (Manufacturing & Wholesale) Mailing Lists</li>
+                            <li>Trucks & Other Vehicles Email List</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="industry-card" data-category="banking" data-animate="fadeInUp" data-delay="0.4">
+                    <img src="https://isrdo.org/storage/topic/JZf12w5kekG0NaALzrcjeoQfw9spj6DZJnSj5QMP.jpg" alt="Banking Email Lists">
+                    <div class="industry-card-content">
+                        <h4>Banking & Finance</h4>
+                        <ul>
+                            <li>Accounting Services Mailing List</li>
+                            <li>Asset Management Email List</li>
+                            <li>Banks, Credit Unions Email List</li>
+                            <li>Credit Card & Transaction Processing Email List</li>
+                            <li>Credit Services Mailing List</li>
+                            <li>Investment Banking Email List</li>
+                            <li>Investment Services Email List</li>
+                            <li>REITS (Real Estate Investment Trusts) Mailing List</li>
+                            <li>Venture Capital & Private Equity Email List</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="industry-card" data-category="business" data-animate="fadeInUp" data-delay="0.5">
+                    <img src="https://miro.medium.com/v2/resize:fit:1400/1*kQSrr5q_2ZRW7juPuC5gXg.jpeg" alt="Business Services Email Lists">
+                    <div class="industry-card-content">
+                        <h4>Business Services</h4>
+                        <ul>
+                            <li>Advertising and Marketing Email List</li>
+                            <li>Auctions Mailing List</li>
+                            <li>Brokerage Email List</li>
+                            <li>Call Centres & Business Centres Email List</li>
+                            <li>Catalogue & Mail Order Houses Mailing List</li>
+                            <li>Commercial Printing Email List</li>
+                            <li>Financial Transaction Processing Mailing List</li>
+                            <li>Debt Collection Mailing List</li>
+                            <li>Environment Email List</li>
+                            <li>Exporters Email List</li>
+                            <li>Facilities Management & Commercial Cleaning Email List</li>
+                            <li>Human Resources & Staffing Mailing List</li>
+                            <li>Information & Document Management Email List</li>
+                            <li>Management Consulting Email List</li>
+                            <li>Photography Studios Mailing List</li>
+                            <li>Research Services Mailing Lists</li>
+                            <li>Security Products & Services Email List</li>
+                            <li>Technical Services Mailing List</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="industry-card" data-category="household" data-animate="fadeInUp" data-delay="0.6">
+                    <img src="https://via.placeholder.com/300x150?text=Household+Goods" alt="Household Goods Email Lists">
+                    <div class="industry-card-content">
+                        <h4>Household Goods</h4>
+                        <ul>
+                            <li>Cleaning Products Mailing Lists</li>
+                            <li>Consumer Appliances Mailing List</li>
+                            <li>Furniture Stores Mailing Lists</li>
+                            <li>Hand, Power & Lawn-Care Tools Email List</li>
+                            <li>Home Furnishings & Fixtures Email List</li>
+                            <li>Household Goods & Accessories Mailing List</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="industry-card" data-category="insurance" data-animate="fadeInUp" data-delay="0.7">
+                    <img src="https://via.placeholder.com/300x150?text=Insurance" alt="Insurance Email Lists">
+                    <div class="industry-card-content">
+                        <h4>Insurance</h4>
+                        <ul>
+                            <li>Life Insurance Mailing List</li>
+                            <li>Health Insurance Mailing Lists</li>
+                            <li>Homeowners Insurance Mailing Lists</li>
+                            <li>Auto Insurance Renewals Mailing List</li>
+                            <li>Crop Insurance Agents Mailing List</li>
+                            <li>Insurance Agents and Brokers Mailing List</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="industry-card" data-category="transportation" data-animate="fadeInUp" data-delay="0.8">
+                    <img src="https://via.placeholder.com/300x150?text=Transportation" alt="Transportation Email Lists">
+                    <div class="industry-card-content">
+                        <h4>Transportation Industry</h4>
+                        <ul>
+                            <li>Aerospace & Defense Email List</li>
+                            <li>Air Transportation Mailing List</li>
+                            <li>Boats & Submarines Email List</li>
+                            <li>Freight & Logistics Services Mailing List</li>
+                            <li>Rail, Bus & Taxi Services Email List</li>
+                            <li>Shipping & Transportation Mailing Lists</li>
+                            <li>Trucking, Moving & Storage Email List</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="industry-card" data-category="utilities" data-animate="fadeInUp" data-delay="0.9">
+                    <img src="https://via.placeholder.com/300x150?text=Utilities" alt="Utilities Email Lists">
+                    <div class="industry-card-content">
+                        <h4>Utilities Industry</h4>
+                        <ul>
+                            <li>Electric Utilities Email List</li>
+                            <li>Gas Utilities Mailing List</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="industry-card" data-category="wholesale" data-animate="fadeInUp" data-delay="1.0">
+                    <img src="https://via.placeholder.com/300x150?text=Wholesale" alt="Wholesale Email Lists">
+                    <div class="industry-card-content">
+                        <h4>Wholesalers/Distributors</h4>
+                        <ul>
+                            <li>Wholesale Trade Agents and Brokers Mailing List</li>
+                            <li>Wholesale Trade Industry Mailing List</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="industry-card" data-category="software" data-animate="fadeInUp" data-delay="1.1">
+                    <img src="https://via.placeholder.com/300x150?text=Software+Services" alt="Software Services Email Lists">
+                    <div class="industry-card-content">
+                        <h4>Software Services</h4>
+                        <ul>
+                            <li>Custom Software & Consulting Email List</li>
+                            <li>Financial, Legal & HR Software Mailing Lists</li>
+                            <li>Software Publishing Email List</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="industry-card" data-category="chemical" data-animate="fadeInUp" data-delay="1.2">
+                    <img src="https://via.placeholder.com/300x150?text=Chemical+Industry" alt="Chemical Industry Email Lists">
+                    <div class="industry-card-content">
+                        <h4>Chemical Industry</h4>
+                        <ul>
+                            <li>Chemicals Mailing List</li>
+                            <li>Industrial and Raw Gases Mailing Lists</li>
+                            <li>Petrochemicals Email List</li>
+                            <li>Industry Professionals Mailing List</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="industry-card" data-category="computer" data-animate="fadeInUp" data-delay="1.3">
+                    <img src="https://via.placeholder.com/300x150?text=Computer+Products" alt="Computer Products Email Lists">
+                    <div class="industry-card-content">
+                        <h4>Computer Products & Services</h4>
+                        <ul>
+                            <li>Computer Network Security Email List</li>
+                            <li>Computer Networking Equipment Email List</li>
+                            <li>Computer Storage Equipment Email List</li>
+                            <li>Computers & Peripherals Mailing Lists</li>
+                            <li>IT Services & Internet Service Providers Mailing List</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="industry-card" data-category="construction" data-animate="fadeInUp" data-delay="1.4">
+                    <img src="https://via.placeholder.com/300x150?text=Construction" alt="Construction Email Lists">
+                    <div class="industry-card-content">
+                        <h4>Construction</h4>
+                        <ul>
+                            <li>Aggregates, Concrete & Cement Mailing Lists</li>
+                            <li>Construction and Renovations Email List</li>
+                            <li>Miscellaneous Building Materials Mailing Lists</li>
+                            <li>Plumbing & HVAC Equipment Email List</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="industry-card" data-category="consumer" data-animate="fadeInUp" data-delay="1.5">
+                    <img src="https://via.placeholder.com/300x150?text=Consumer+Goods" alt="Consumer Goods Email Lists">
+                    <div class="industry-card-content">
+                        <h4>Consumer Goods & Services</h4>
+                        <ul>
+                            <li>Apparel, Footwear & Accessories Email List</li>
+                            <li>Cosmetics & Personal Care Mailing List</li>
+                            <li>Funeral Homes & Related Services Email List</li>
+                            <li>Hair Salons Mailing Lists</li>
+                            <li>Laundry & Dry Cleaning Services Mailing List</li>
+                            <li>Recreational Goods Email List</li>
+                            <li>Tobacco & Cigarettes Email List</li>
+                            <li>Watches & Jewellery Mailing Lists</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="industry-card" data-category="education" data-animate="fadeInUp" data-delay="1.6">
+                    <img src="https://via.placeholder.com/300x150?text=Education" alt="Education Email Lists">
+                    <div class="industry-card-content">
+                        <h4>Education Industry</h4>
+                        <ul>
+                            <li>Colleges & Universities Email List</li>
+                            <li>Education Services Mailing Lists</li>
+                            <li>Schools - K-12 Email List</li>
+                            <li>Training, Career & Trade Schools Email List</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="industry-card" data-category="electronics" data-animate="fadeInUp" data-delay="1.7">
+                    <img src="https://via.placeholder.com/300x150?text=Electronics" alt="Electronics Email Lists">
+                    <div class="industry-card-content">
+                        <h4>Electronics Industry</h4>
+                        <ul>
+                            <li>Consumer Electronics (Manufacturing) Mailing List</li>
+                            <li>Electronic Components Mailing List</li>
+                            <li>Electronics - Wholesale Email List</li>
+                            <li>High-Tech Electrical Industry Mailing Lists</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="industry-card" data-category="energy" data-animate="fadeInUp" data-delay="1.8">
+                    <img src="https://via.placeholder.com/300x150?text=Energy" alt="Energy Email Lists">
+                    <div class="industry-card-content">
+                        <h4>Energy Industry</h4>
+                        <ul>
+                            <li>Electricity, Oil & Gas Email List</li>
+                            <li>Oil & Gas Mailing Lists</li>
+                            <li>Oil & Gas Drilling & Exploration Email List</li>
+                            <li>Oil & Gas Extraction Mailing Lists</li>
+                            <li>Oil & Gas Pipelines Construction Email List</li>
+                            <li>Oil & Gas Refining & Marketing Mailing List</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="industry-card" data-category="environmental" data-animate="fadeInUp" data-delay="1.9">
+                    <img src="https://via.placeholder.com/300x150?text=Environmental" alt="Environmental Email Lists">
+                    <div class="industry-card-content">
+                        <h4>Environmental Services</h4>
+                        <ul>
+                            <li>Clean Energy Technology Mailing Lists</li>
+                            <li>Environmental & Waste Services Email List</li>
+                            <li>Remediation Services & Supplies Mailing Lists</li>
+                            <li>Water & Water Treatment Email List</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="industry-card" data-category="food" data-animate="fadeInUp" data-delay="2.0">
+                    <img src="https://via.placeholder.com/300x150?text=Food+Beverage" alt="Food & Beverage Email Lists">
+                    <div class="industry-card-content">
+                        <h4>Food & Beverage Manufacturing</h4>
+                        <ul>
+                            <li>Confectioners Email List</li>
+                            <li>Food & Beverage Email List</li>
+                            <li>Food - Wholesale Mailing List</li>
+                            <li>Meat Products Industry Mailing List</li>
+                            <li>Processed and Packaged Goods Mailing List</li>
+                            <li>Soft Drink Beverages Mailing Lists</li>
+                            <li>Meat Department Email List</li>
+                            <li>Wineries, Distillers & Breweries Email List</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="industry-card" data-category="government" data-animate="fadeInUp" data-delay="2.1">
+                    <img src="https://via.placeholder.com/300x150?text=Government" alt="Government Email Lists">
+                    <div class="industry-card-content">
+                        <h4>Government</h4>
+                        <ul>
+                            <li>Cities, Towns & Municipalities Mailing List</li>
+                            <li>Government Professionals Mailing List</li>
+                            <li>Federal Government Employees at Home Email List</li>
+                            <li>Government Agencies and Departments Mailing List</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="industry-card" data-category="packaging" data-animate="fadeInUp" data-delay="2.2">
+                    <img src="https://via.placeholder.com/300x150?text=Packaging" alt="Packaging Email Lists">
+                    <div class="industry-card-content">
+                        <h4>Packaging Industry</h4>
+                        <ul>
+                            <li>Pharmaceutical and Medical Packaging Email List</li>
+                            <li>Food & Beverage Packaging Business Email List</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="industry-card" data-category="pet" data-animate="fadeInUp" data-delay="2.3">
+                    <img src="https://via.placeholder.com/300x150?text=Pet+Care" alt="Pet Care Email Lists">
+                    <div class="industry-card-content">
+                        <h4>Pet Care Industry</h4>
+                        <ul>
+                            <li>Pet Products Mailing List</li>
+                            <li>Veterinary Care Email List</li>
+                            <li>Pet Owners Mailing List</li>
+                            <li>Pet Insurance Businesses Email List</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="industry-card" data-category="pharmaceutical" data-animate="fadeInUp" data-delay="2.4">
+                    <img src="https://via.placeholder.com/300x150?text=Pharmaceutical" alt="Pharmaceutical Email Lists">
+                    <div class="industry-card-content">
+                        <h4>Pharmaceutical</h4>
+                        <ul>
+                            <li>Pharmaceutical Manufacturers Mailing List</li>
+                            <li>Pharmaceuticals Industry Executives Mailing List</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="industry-card" data-category="real-estate" data-animate="fadeInUp" data-delay="2.5">
+                    <img src="https://via.placeholder.com/300x150?text=Real+Estate" alt="Real Estate Email Lists">
+                    <div class="industry-card-content">
+                        <h4>Real Estate Industry</h4>
+                        <ul>
+                            <li>Real Estate Agents Mailing List</li>
+                            <li>Real Estate Development Email List</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="industry-card" data-category="retail" data-animate="fadeInUp" data-delay="2.6">
+                    <img src="https://via.placeholder.com/300x150?text=Retail" alt="Retail Email Lists">
+                    <div class="industry-card-content">
+                        <h4>Retail Industry</h4>
+                        <ul>
+                            <li>Apparel, Footwear & Accessories Mailing List</li>
+                            <li>Books and Music Stores Email List</li>
+                            <li>Car & Truck Rental and Leasing Email List</li>
+                            <li>Consumer Electronics & Computers Mailing List</li>
+                            <li>Convenience Stores & Gas Stations Email List</li>
+                            <li>Department Stores, Shopping Centres & Superstores Email List</li>
+                            <li>Florists & Gift Stores Mailing List</li>
+                            <li>Grocery & Specialty Food Stores Mailing List</li>
+                            <li>Home Improvement Mailing List</li>
+                            <li>Office Products (Retail & Distribution) Mailing List</li>
+                            <li>Rental & Leasing Services Mailing List</li>
+                            <li>Retail Mailing Lists</li>
+                            <li>Sporting Goods Stores Mailing List</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="industry-card" data-category="leisure" data-animate="fadeInUp" data-delay="2.7">
+                    <img src="https://via.placeholder.com/300x150?text=Leisure" alt="Leisure Email Lists">
+                    <div class="industry-card-content">
+                        <h4>Leisure & Entertainment</h4>
+                        <ul>
+                            <li>Amusement Parks, Arcades, Attractions Email List</li>
+                            <li>Fitness & Dance Facilities Mailing Lists</li>
+                            <li>Lodging Mailing Lists</li>
+                            <li>Museums & Art Galleries Mailing Lists</li>
+                            <li>Music & Performing Arts Mailing Lists</li>
+                            <li>Amusement and Recreation Industry Mailing List</li>
+                            <li>Restaurants Mailing Lists</li>
+                            <li>Sporting Goods Mailing Lists</li>
+                            <li>Sports Teams & Sporting Activities Email List</li>
+                            <li>Theatres Mailing Lists</li>
+                            <li>Toys & Games Email List</li>
+                            <li>Travel Services & Agencies Email List</li>
+                            <li>Zoos & National Parks Email List</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="industry-card" data-category="machinery" data-animate="fadeInUp" data-delay="2.8">
+                    <img src="https://via.placeholder.com/300x150?text=Machinery" alt="Machinery Email Lists">
+                    <div class="industry-card-content">
+                        <h4>Machinery & Equipment</h4>
+                        <ul>
+                            <li>Batteries & Power Storage Equipment Email List</li>
+                            <li>Business Equipment Mailing List</li>
+                            <li>Communication Equipment Mailing List</li>
+                            <li>Farm, Forestry & Construction Equipment Email List</li>
+                            <li>Industrial Electrical Equipment Mailing List</li>
+                            <li>Industrial Machinery & Equipment (Manufacturing) Email List</li>
+                            <li>Industrial Machinery & Equipment (Wholesale) Mailing List</li>
+                            <li>Machinery Mailing List</li>
+                            <li>Photographic & Optical Equipment Email List</li>
+                            <li>Power Conversion & Protection Equipment Email List</li>
+                            <li>Test & Measurement Equipment Mailing List</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="industry-card" data-category="manufacturing" data-animate="fadeInUp" data-delay="2.9">
+                    <img src="https://via.placeholder.com/300x150?text=Manufacturing" alt="Manufacturing Email Lists">
+                    <div class="industry-card-content">
+                        <h4>Manufacturing Industry</h4>
+                        <ul>
+                            <li>Circuit Boards Industry Mailing List</li>
+                            <li>Glass and Clay Email List</li>
+                            <li>Metal Fabrication Email List</li>
+                            <li>Paper & Paper Products Mailing List</li>
+                            <li>Plastic, Packaging & Containers Mailing List</li>
+                            <li>Prefabricated Manufactured Housing Mailing Lists</li>
+                            <li>Scientific & Technical Instruments Email List</li>
+                            <li>Semiconductors Email List</li>
+                            <li>Small Tools & Accessories Mailing List</li>
+                            <li>Steel & Iron Email List</li>
+                            <li>Textile & Fabric Mills Email List</li>
+                            <li>Tires & Rubber Products Mailing List</li>
+                            <li>Wire & Cable Mailing Lists</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="industry-card" data-category="media" data-animate="fadeInUp" data-delay="3.0">
+                    <img src="https://via.placeholder.com/300x150?text=Media" alt="Media Email Lists">
+                    <div class="industry-card-content">
+                        <h4>Media Industry</h4>
+                        <ul>
+                            <li>Cable & Satellite Email List</li>
+                            <li>Film and Video Production Services Email List</li>
+                            <li>Libraries & Archives Mailing Lists</li>
+                            <li>Multimedia & Graphic Design Email List</li>
+                            <li>Newspapers Mailing List</li>
+                            <li>Publishing (Excluding Newspapers) Email List</li>
+                            <li>Radio Stations Email List</li>
+                            <li>Television Stations Mailing List</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="industry-card" data-category="healthcare" data-animate="fadeInUp" data-delay="3.1">
+                    <img src="https://via.placeholder.com/300x150?text=Healthcare" alt="Healthcare Email Lists">
+                    <div class="industry-card-content">
+                        <h4>Medical & Healthcare</h4>
+                        <ul>
+                            <li>Biotechnology Industry Mailing List</li>
+                            <li>Dentists Mailing List</li>
+                            <li>Drug Stores & Pharmacies Mailing List</li>
+                            <li>Emergency Medical Transportation & Services Email List</li>
+                            <li>Health Services Mailing List</li>
+                            <li>Healthcare Mailing Lists</li>
+                            <li>Home Health Care Mailing List</li>
+                            <li>Hospitals & Clinics Mailing List</li>
+                            <li>Information Collection/Delivery Services Email List</li>
+                            <li>Long-Term Care Facilities Email List</li>
+                            <li>Medical Appliances, Equipment & Supplies Email List</li>
+                            <li>Medical Clinics & Testing/Research Facilities Email List</li>
+                            <li>Medical Practitioners Mailing List</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="industry-card" data-category="mining" data-animate="fadeInUp" data-delay="3.2">
+                    <img src="https://via.placeholder.com/300x150?text=Mining" alt="Mining Email Lists">
+                    <div class="industry-card-content">
+                        <h4>Mining & Natural Resources</h4>
+                        <ul>
+                            <li>Concrete & Cement Industry Email List</li>
+                            <li>Aluminum Industry Mailing List</li>
+                            <li>Oil & Gas Industry Mailing List</li>
+                            <li>Gold & Silver Mining Email List</li>
+                            <li>Industrial Minerals & Metals Email List</li>
+                            <li>Lumber, Wood Production & Timber Operations Email List</li>
+                            <li>Mining, Metals & Minerals Mailing List</li>
+                            <li>Mining, Oil & Gas Equipment Email List</li>
+                            <li>Natural Resources Mailing List</li>
+                            <li>Oil & Gas Exploration Email List</li>
+                            <li>Oil & Gas Extraction Industry Mailing List</li>
+                            <li>Oil & Gas Pipelines Mailing List</li>
+                            <li>Oil & Gas Refining Email List</li>
+                            <li>Pulp & Paper Industry Mailing List</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="industry-card" data-category="telecommunications" data-animate="fadeInUp" data-delay="3.3">
+                    <img src="https://via.placeholder.com/300x150?text=Telecommunications" alt="Telecommunications Email Lists">
+                    <div class="industry-card-content">
+                        <h4>Telecommunications</h4>
+                        <ul>
+                            <li>Communication Equipment Email List</li>
+                            <li>Telephony & Wireless Email List</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (Unchanged) -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 mb-4">
+                    <h5 style="text-decoration: underline; color: #ffd000;">Address</h5>
+                    <p>MS Data ProDocs PVT,<br>1002 South Center Street #4296,<br>North America, MT 59230</p>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5 style="text-decoration: underline; color: #ffd000;">Industry Mailing Lists</h5>
+                    <ul class="list-unstyled">
+                        <li>Construction Industry Lists</li>
+                        <li>Manufacturing Industry Lists</li>
+                        <li>Mining Industry Lists</li>
+                        <li>Transportation Industry Lists</li>
+                        <li>Oil and Gas Mailing List</li>
+                        <li>Banking and Finance Email List</li>
+                        <li>Retail Industry Lists</li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5 style="text-decoration: underline; color: #ffd000;">Healthcare Lists</h5>
+                    <ul class="list-unstyled">
+                        <li>Medical Mailing List</li>
+                        <li>Physician Email List</li>
+                        <li>Dentist Email List</li>
+                        <li>Doctors Email List</li>
+                        <li>Physical Therapist Email List</li>
+                        <li>Practitioner</li>
+                        <li>Nurse Practitioner</li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5 style="text-decoration: underline; color: #ffd000;">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="../AboutUs.html">About Us</a></li>
+                        <li><a href="../privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="../terms-of-use.html">Terms of Use</a></li>
+                    </ul>
+                    <h5>Contact Us</h5>
+                    <p>Phone: +1 406-780-7401</p>
+                    <p>Email: info@msdataprodocs.org</p>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <p style="color: #30b8b1;">© 2025 MS Data ProDocs PVT. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+
+    <!-- Custom JS for Navbar Animation -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const navLinks = document.querySelectorAll('.nav-link, .dropdown-item');
+            navLinks.forEach(link => {
+                link.addEventListener('mouseover', function () {
+                    this.classList.add('animate__pulse');
+                });
+                link.addEventListener('animationend', function () {
+                    this.classList.remove('animate__pulse');
+                });
+            });
+        });
+    </script>
+
+    <!-- Custom JS for Filter Functionality -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const industryCards = document.querySelectorAll('.industry-card');
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function () {
+                    // Remove active class from all buttons
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    // Add active class to clicked button
+                    this.classList.add('active');
+
+                    const filter = this.getAttribute('data-filter');
+
+                    // Show/hide cards based on filter
+                    industryCards.forEach(card => {
+                        if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                            card.classList.remove('hidden');
+                        } else {
+                            card.classList.add('hidden');
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+
+    <!-- GSAP Animations -->
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Intro Section Animations
+        gsap.from(".intro-section h1", {
+            opacity: 0,
+            y: -50,
+            duration: 1,
+            ease: "power3.out",
+            scrollTrigger: {
+                trigger: ".intro-section",
+                start: "top 80%"
+            }
+        });
+
+        gsap.from(".intro-section p", {
+            opacity: 0,
+            y: 50,
+            duration: 1,
+            delay: 0.3,
+            ease: "power3.out",
+            scrollTrigger: {
+                trigger: ".intro-section",
+                start: "top 80%"
+            }
+        });
+
+        // Overview Section Animations
+        from(".overview-section h2", {
+            opacity: 0,
+            x: -50,
+            duration: 0.8,
+            ease: "power3.out",
+            scrollTrigger: {
+                trigger: ".overview-section",
+                start: "top 80%"
+            }
+        });
+
+        gsap.from(".overview-section p", {
+            opacity: 0,
+            y: 50,
+            duration: 0.8,
+            delay: 0.2,
+            ease: "power3.out",
+            scrollTrigger: {
+                trigger: ".overview-section",
+                start: "top 80%"
+            }
+        });
+
+        gsap.from(".overview-section img", {
+            opacity: 0,
+            x: 50,
+            duration: 0.8,
+            delay: 0.2,
+            ease: "power3.out",
+            scrollTrigger: {
+                trigger: ".overview-section",
+                start: "top 80%"
+            }
+        });
+
+        // Industries Section Animations
+        gsap.from(".industries-section h2", {
+            opacity: 0,
+            y: -30,
+            duration: 0.8,
+            ease: "power3.out",
+            scrollTrigger: {
+                trigger: ".industries-section",
+                start: "top 80%"
+            }
+        });
+
+        gsap.from(".filter-buttons .filter-btn", {
+            opacity: 0,
+            y: 50,
+            duration: 0.6,
+            stagger: 0.1,
+            ease: "power3.out",
+            scrollTrigger: {
+                trigger: ".filter-buttons",
+                start: "top 80%"
+            }
+        });
+
+        gsap.from(".industry-card", {
+            opacity: 0,
+            y: 50,
+            duration: 0.6,
+            stagger: 0.1,
+            ease: "power3.out",
+            scrollTrigger: {
+                trigger: ".industry-grid",
+                start: "top 80%"
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MS Data ProDocs PVT offers Agriculture, Forestry, and Fishing Industry Mailing Lists to target decision-makers in farming, logging, and fishing sectors for efficient B2B marketing campaigns.">
+    <meta name="keywords" content="agriculture mailing lists, forestry mailing lists, fishing mailing lists, B2B marketing, industry decision-makers">
+    <meta name="author" content="MS Data ProDocs PVT">
+    <title>Agriculture, Forestry, and Fishing Mailing Lists - MS Data ProDocs PVT</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <!-- GSAP for Animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <!-- Custom CSS for Navbar -->
+    <link rel="stylesheet" href="../navbar.css">
+
+    <!-- Custom CSS for Footer -->
+    <link rel="stylesheet" href="../footer.css">
+
+    <!-- Inline CSS for Unique Body Content -->
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            overflow-x: hidden;
+            background-color: #f0f4f3; /* Light green-gray for agriculture theme */
+        }
+
+        /* Active Nav Link */
+        .active {
+            color: #f8c146 !important;
+        }
+
+        /* Intro Section */
+        .intro-section {
+            background: linear-gradient(135deg, #1a3c34, #4a7043);
+            color: white;
+            padding: 120px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .intro-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://via.placeholder.com/1920x1080?text=Agriculture+Forestry+Fishing+Background') no-repeat center/cover;
+            opacity: 0.2;
+            z-index: 0;
+        }
+
+        .intro-section .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .intro-section h1 {
+            font-size: 3.8rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
+        }
+
+        .intro-section p {
+            font-size: 1.4rem;
+            max-width: 900px;
+            margin: 0 auto;
+            opacity: 0.95;
+        }
+
+        .intro-section .cta-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 30px;
+            background-color: #f8c146;
+            color: #1a3c34;
+            font-weight: 600;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .intro-section .cta-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Overview Section */
+        .overview-section {
+            padding: 80px 0;
+            background-color: #ffffff;
+        }
+
+        .overview-section .content-card {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease;
+        }
+
+        .overview-section .content-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .overview-section h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #1a3c34;
+            margin-bottom: 20px;
+        }
+
+        .overview-section p {
+            font-size: 1.1rem;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .overview-section .stats {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .overview-section .stat-item {
+            text-align: center;
+            padding: 15px;
+            flex: 1;
+            min-width: 150px;
+        }
+
+        .overview-section .stat-item h3 {
+            font-size: 1.5rem;
+            color: #4a7043;
+            margin-bottom: 5px;
+        }
+
+        .overview-section .stat-item p {
+            font-size: 0.9rem;
+            color: #777;
+        }
+
+        /* Mailing Lists Section */
+        .mailing-lists-section {
+            padding: 80px 0;
+            background: linear-gradient(to bottom, #f0f4f3, #e8edea);
+        }
+
+        .mailing-lists-section h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #1a3c34;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .mailing-lists-section .list-card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .mailing-lists-section .list-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .mailing-lists-section .list-card h3 {
+            font-size: 1.3rem;
+            color: #1a3c34;
+            margin-bottom: 10px;
+        }
+
+        .mailing-lists-section .list-card p {
+            font-size: 0.95rem;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        .mailing-lists-section .list-card .icon {
+            color: #f8c146;
+            font-size: 1.5rem;
+            margin-right: 10px;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 992px) {
+            .intro-section {
+                padding: 80px 0;
+            }
+
+            .intro-section h1 {
+                font-size: 2.8rem;
+            }
+
+            .intro-section p {
+                font-size: 1.2rem;
+            }
+
+            .overview-section, .mailing-lists-section {
+                padding: 60px 0;
+            }
+
+            .overview-section h2, .mailing-lists-section h2 {
+                font-size: 2.2rem;
+            }
+
+            .overview-section .content-card {
+                margin-bottom: 20px;
+            }
+
+            .overview-section .stats {
+                flex-direction: column;
+            }
+
+            .overview-section .stat-item {
+                margin-bottom: 15px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .intro-section {
+                padding: 60px 0;
+            }
+
+            .intro-section h1 {
+                font-size: 2rem;
+            }
+
+            .intro-section p {
+                font-size: 1rem;
+            }
+
+            .overview-section, .mailing-lists-section {
+                padding: 40px 0;
+            }
+
+            .overview-section h2, .mailing-lists-section h2 {
+                font-size: 1.8rem;
+            }
+
+            .mailing-lists-section .list-card h3 {
+                font-size: 1.1rem;
+            }
+
+            .mailing-lists-section .list-card p {
+                font-size: 0.85rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand animate__animated animate__pulse" href="../index.html">MS Data ProDocs PVT</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link animate__animated" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link animate__animated" href="../AboutUs.html">About Us</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle animate__animated active" href="#" id="mailingLists" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Mailing Lists
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="mailingLists">
+                            <li><a class="dropdown-item animate__animated active" href="agriculture-industry.html">Agriculture Industry Lists</a></li>
+                            <li><a class="dropdown-item animate__animated" href="it-industry.html">IT Industry Lists</a></li>
+                            <li><a class="dropdown-item animate__animated" href="mining-industry.html">Mining Industry Lists</a></li>
+                            <li><a class="dropdown-item animate__animated" href="construction-industry.html">Construction Industry Lists</a></li>
+                            <li><a class="dropdown-item animate__animated" href="manufacturing-industry.html">Manufacturing Industry Lists</a></li>
+                            <li><a class="dropdown-item animate__animated" href="transportation-industry.html">Transportation Industry Lists</a></li>
+                            <li><a class="dropdown-item animate__animated" href="wholesale-trade-industry.html">Wholesale Trade Industry Lists</a></li>
+                            <li><a class="dropdown-item animate__animated" href="retail-industry.html">Retail Industry Lists</a></li>
+                            <li><a class="dropdown-item animate__animated" href="financial-services.html">Financial Services Lists</a></li>
+                            <li><a class="dropdown-item animate__animated" href="business-services.html">Business Services Industry Lists</a></li>
+                            <li><a class="dropdown-item animate__animated" href="textile-apparel-industry.html">Textile & Apparel Industry Lists</a></li>
+                            <li><a class="dropdown-item animate__animated" href="electronics-industry.html">Electronics Industry Lists</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle animate__animated" href="#" id="emailContacts" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Email Contacts
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="emailContacts">
+                            <li><a class="dropdown-item animate__animated" href="../EmailContacts/by-industry.html">By Industry</a></li>
+                            <li><a class="dropdown-item animate__animated" href="../EmailContacts/by-job-title.html">By Job Title</a></li>
+                            <li><a class="dropdown-item animate__animated" href="../EmailContacts/technology-lists.html">Technology Lists</a></li>
+                            <li><a class="dropdown-item animate__animated" href="../EmailContacts/healthcare-lists.html">Healthcare Email Lists</a></li>
+                            <li><a class="dropdown-item animate__animated" href="../EmailContacts/executives-email.html">Executives Email List</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle animate__animated" href="#" id="dataServices" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Data Services
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="dataServices">
+                            <li><a class="dropdown-item animate__animated" href="../DataServices/email-appending.html">Email Appending</a></li>
+                            <li><a class="dropdown-item animate__animated" href="../DataServices/email-validation.html">Email Validation</a></li>
+                            <li><a class="dropdown-item animate__animated" href="../DataServices/data-cleansing.html">Data Cleansing</a></li>
+                            <li><a class="dropdown-item animate__animated" href="../DataServices/data-enhancement.html">Data Enhancement</a></li>
+                            <li><a class="dropdown-item animate__animated" href="../DataServices/lead-management.html">Lead Management</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link animate__animated" href="../buyer-supplier.html">Buyer-Supplier</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link animate__animated" href="../contact.html">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Intro Section -->
+    <section class="intro-section">
+        <div class="container">
+            <h1 data-animate="fadeInDown">Agriculture, Forestry, and Fishing Mailing Lists</h1>
+            <p data-animate="fadeInUp" data-delay="0.2">Reach decision-makers in the agriculture, forestry, and fishing industries with our comprehensive mailing lists for targeted B2B marketing campaigns.</p>
+            <a href="../contact.html" class="cta-btn" data-animate="fadeInUp" data-delay="0.4">Get Started Today</a>
+        </div>
+    </section>
+
+    <!-- Overview Section -->
+    <section class="overview-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="content-card" data-animate="fadeInLeft">
+                        <h2>Target Key Decision-Makers</h2>
+                        <p>Our Agriculture, Forestry, and Fishing Industry Mailing List provides access to executives and professionals in farming, logging, fishing, and related trades. This essential sector drives economic growth, and our database ensures you connect with decision-makers who matter.</p>
+                        <p>With detailed company information and continuously updated data, our lists enable efficient marketing campaigns, from email to direct mail, with a high delivery rate guaranteed.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="content-card" data-animate="fadeInRight">
+                        <h2>Industry Insights</h2>
+                        <div class="stats">
+                            <div class="stat-item">
+                                <h3>683,306</h3>
+                                <p>Total Companies</p>
+                            </div>
+                            <div class="stat-item">
+                                <h3>7,073,337</h3>
+                                <p>Est. Employment</p>
+                            </div>
+                            <div class="stat-item">
+                                <h3>SIC 01-09</h3>
+                                <p>Industry Codes</p>
+                            </div>
+                        </div>
+                    </div>
+                    <img src="https://i0.wp.com/www.india-briefing.com/news/wp-content/uploads/2021/11/MicrosoftTeams-image-6.jpg?fit=900%2C506&ssl=1" alt="Agriculture Industry" class="img-fluid mt-3 rounded-3" data-animate="fadeInUp">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mailing Lists Section -->
+    <section class="mailing-lists-section">
+        <div class="container">
+            <h2 data-animate="fadeIn">Our Agriculture, Forestry, and Fishing Mailing Lists</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="list-card" data-animate="fadeInUp" data-delay="0.2">
+                        <h3><span class="icon">★</span>Crop Farming</h3>
+                        <p>Target executives in crop production, including grains, vegetables, and fruits, with precise contact data.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="list-card" data-animate="fadeInUp" data-delay="0.3">
+                        <h3><span class="icon">★</span>Livestock Farming</h3>
+                        <p>Reach decision-makers in cattle, poultry, and other animal farming operations for effective B2B outreach.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="list-card" data-animate="fadeInUp" data-delay="0.4">
+                        <h3><span class="icon">★</span>Forestry and Logging</h3>
+                        <p>Connect with professionals in timber harvesting and forest management with our updated mailing lists.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="list-card" data-animate="fadeInUp" data-delay="0.5">
+                        <h3><span class="icon">★</span>Fishing and Aquaculture</h3>
+                        <p>Market to leaders in commercial fishing and fish farming with high-delivery-rate contact data.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="list-card" data-animate="fadeInUp" data-delay="0.6">
+                        <h3><span class="icon">★</span>Seed and Crop Support</h3>
+                        <p>Engage with executives in seed production and agricultural support services for targeted campaigns.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="list-card" data-animate="fadeInUp" data-delay="0.7">
+                        <h3><span class="icon">★</span>Associated Trades</h3>
+                        <p>Reach professionals in related trades, such as equipment suppliers and agricultural consultants.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 mb-4">
+                    <h5 style="text-decoration: underline; color: #ffd000;">Address</h5>
+                    <p>MS Data ProDocs PVT,<br>1002 South Center Street #4296,<br>North America, MT 59230</p>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5 style="text-decoration: underline; color: #ffd000;">Industry Mailing Lists</h5>
+                    <ul class="list-unstyled">
+                        <li>Construction Industry Lists</li>
+                        <li>Manufacturing Industry Lists</li>
+                        <li>Mining Industry Lists</li>
+                        <li>Transportation Industry Lists</li>
+                        <li>Oil and Gas Mailing List</li>
+                        <li>Banking and Finance Email List</li>
+                        <li>Retail Industry Lists</li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5 style="text-decoration: underline; color: #ffd000;">Healthcare Lists</h5>
+                    <ul class="list-unstyled">
+                        <li>Medical Mailing List</li>
+                        <li>Physician Email List</li>
+                        <li>Dentist Email List</li>
+                        <li>Doctors Email List</li>
+                        <li>Physical Therapist Email List</li>
+                        <li>Practitioner</li>
+                        <li>Nurse Practitioner</li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5 style="text-decoration: underline; color: #ffd000;">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="../AboutUs.html">About Us</a></li>
+                        <li><a href="../privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="../terms-of-use.html">Terms of Use</a></li>
+                    </ul>
+                    <h5>Contact Us</h5>
+                    <p>Phone: +1 406-780-7401</p>
+                    <p>Email: info@msdataprodocs.org</p>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <p style="color: #30b8b1;">© 2025 MS Data ProDocs PVT. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+
+    <!-- Custom JS for Navbar Animation -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const navLinks = document.querySelectorAll('.nav-link, .dropdown-item');
+            navLinks.forEach(link => {
+                link.addEventListener('mouseover', function () {
+                    this.classList.add('animate__pulse');
+                });
+                link.addEventListener('animationend', function () {
+                    this.classList.remove('animate__pulse');
+                });
+            });
+        });
+    </script>
+
+    <!-- GSAP Animations -->
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Intro Section Animations
+        gsap.from(".intro-section h1", {
+            opacity: 0,
+            y: -50,
+            duration: 1,
+            ease: "power3.out",
+            scrollTrigger: {
+                trigger: ".intro-section",
+                start: "top 80%"
+            }
+        });
+
+        gsap.from(".intro-section p", {
+            opacity: 0,
+            y: 50,
+            duration: 1,
+            delay: 0.3,
+            ease: "power3.out",
+            scrollTrigger: {
+                trigger: ".intro-section",
+                start: "top 80%"
+            }
+        });
+
+        gsap.from(".intro-section .cta-btn", {
+            opacity: 0,
+            y: 50,
+            duration: 1,
+            delay: 0.5,
+            ease: "power3.out",
+            scrollTrigger: {
+                trigger: ".intro-section",
+                start: "top 80%"
+            }
+        });
+
+        // Overview Section Animations
+        gsap.from(".overview-section .content-card", {
+            opacity: 0,
+            y: 50,
+            duration: 0.8,
+            stagger: 0.2,
+            ease: "power3.out",
+            scrollTrigger: {
+                trigger: ".overview-section",
+                start: "top 80%"
+            }
+        });
+
+        gsap.from(".overview-section img", {
+            opacity: 0,
+            x: 50,
+            duration: 0.8,
+            delay: 0.4,
+            ease: "power3.out",
+            scrollTrigger: {
+                trigger: ".overview-section",
+                start: "top 80%"
+            }
+        });
+
+        // Mailing Lists Section Animations
+        gsap.from(".mailing-lists-section h2", {
+            opacity: 0,
+            y: -30,
+            duration: 0.8,
+            ease: "power3.out",
+            scrollTrigger: {
+                trigger: ".mailing-lists-section",
+                start: "top 80%"
+            }
+        });
+
+        gsap.from(".mailing-lists-section .list-card", {
+            opacity: 0,
+            y: 50,
+            duration: 0.8,
+            stagger: 0.1,
+            ease: "power3.out",
+            scrollTrigger: {
+                trigger: ".mailing-lists-section",
+                start: "top 80%"
+            }
+        });
+    </script>
+</body>
+</html>

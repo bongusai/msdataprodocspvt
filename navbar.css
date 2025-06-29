@@ -1,0 +1,90 @@
+/* Custom Navbar Styling */
+.navbar {
+    background-color: #1a3c34; /* Dark teal background */
+    padding: 15px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.active {
+    color: #f8c146 !important;
+}
+
+.navbar-brand {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ecdede !important; /* Gold color for brand */
+    transition: transform 0.3s ease;
+}
+
+.navbar-brand:hover {
+    transform: scale(1.1);
+    color: #ffffff !important;  
+}
+
+.nav-link {
+    color: #ffffff !important;
+    font-size: 1.0rem;
+    padding: 10px 15px !important;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #f8c146 !important;
+    transform: translateY(-2px);
+    background-color: #2e5a50; /* Slightly lighter teal on hover */
+    border-radius: 5px;
+}
+
+.dropdown-menu {
+    background-color: #2e5a50;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-item {
+    color: #ffffff;
+    padding: 10px 20px;
+    transition: all 0.3s ease;
+}
+
+.dropdown-item:hover {
+    background-color: #f8c146;
+    color: #1a3c34 !important;
+    transform: translateX(5px);
+}
+
+/* Animation for dropdown show */
+.dropdown-menu.show {
+    animation: fadeInDown 0.5s ease;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+    .navbar-nav {
+        background-color: #1a3c34;
+        padding: 15px;
+        border-radius: 8px;
+    }
+    .nav-link {
+        padding: 10px !important;
+    }
+    .dropdown-menu {
+        background-color: #2e5a50;
+    }
+}
+
+
+
+
+/* ------------------------------------------EmailContacts-------------------------------------------- */
+
+.overview-image {
+    display: block !important;
+    width: 100% !important;              /* Fill the container */
+    height: 300px !important;            /* Fixed rectangle height */
+    object-fit: cover !important;        /* Crop to fill, preserve aspect */
+    border-radius: 10px !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2) !important;
+    margin: 0 auto 60px auto !important; /* Centered with bottom space */
+}

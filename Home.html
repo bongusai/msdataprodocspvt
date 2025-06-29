@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Precision Marketing: Targeted brand growth through creative, efficient, and data-driven digital and omni-channel campaigns.">
+    <meta name="keywords" content="precision marketing, digital marketing, B2B marketing, data solutions, brand growth">
+    <meta name="author" content="Data ProDocs INC">
+    <title>Data ProDocs INC - Precision Marketing for Brand Growth</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- GSAP for Animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <!-- Custom CSS -->
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(135deg, #007bff, #00d4ff);
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero-section h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .hero-section p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto 30px;
+        }
+
+        .btn-primary {
+            background-color: #ff6f61;
+            border: none;
+            padding: 12px 30px;
+            font-size: 1.1rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: #e55a50;
+        }
+
+        /* Services Section */
+        .services-section {
+            padding: 80px 0;
+            background-color: #f8f9fa;
+        }
+
+        .services-section h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+        }
+
+        .service-card {
+            text-align: center;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            margin-bottom: 30px;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .service-card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin: 20px 0 10px;
+        }
+
+        /* Why Choose Us Section */
+        .why-choose-us-section {
+            padding: 80px 0;
+            background-color: #fff;
+        }
+
+        .why-choose-us-section h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+        }
+
+        .stat-card {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .stat-card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .stat-card h3 {
+            font-size: 1.8rem;
+            color: #007bff;
+        }
+
+        /* Process Section */
+        .process-section {
+            padding: 80px 0;
+            background-color: #f8f9fa;
+            text-align: center;
+        }
+
+        .process-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .process-section p {
+            max-width: 800px;
+            margin: 0 auto 50px;
+            font-size: 1.1rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #343a40;
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        footer a {
+            color: #ff6f61;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .hero-section h1 {
+                font-size: 2rem;
+            }
+
+            .hero-section p {
+                font-size: 1rem;
+            }
+
+            .services-section h2,
+            .why-choose-us-section h2,
+            .process-section h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <h1>Precision Marketing: Image Targeted Brand Growth</h1>
+            <p>Our precision marketing approach focuses on reaching the right leads in your audience through creative, efficient, and targeted digital and omni-channel campaigns.</p>
+            <a href="#contact" class="btn btn-primary">Contact for Services</a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section">
+        <div class="container">
+            <h2>What We Do</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="service-card" data-animate="fadeInUp">
+                        <img src="https://via.placeholder.com/300x200" alt="Precision Targeting">
+                        <h3>Precision Targeting</h3>
+                        <p>Identify and engage with your ideal customers to improve brand awareness.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-card" data-animate="fadeInUp" data-delay="0.2">
+                        <img src="https://via.placeholder.com/300x200" alt="Personalized Engagement">
+                        <h3>Personalized Engagement</h3>
+                        <p>Create tailored campaigns that resonate with your audience.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-card" data-animate="fadeInUp" data-delay="0.4">
+                        <img src="https://via.placeholder.com/300x200" alt="Behavioral Insights">
+                        <h3>Behavioral Insights</h3>
+                        <p>Leverage data to understand customer behavior and optimize strategies.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-card" data-animate="fadeInUp" data-delay="0.6">
+                        <img src="https://via.placeholder.com/300x200" alt="Enhanced Customer Service">
+                        <h3>Enhanced Customer Service</h3>
+                        <p>Improve customer interactions with data-driven insights.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-card" data-animate="fadeInUp" data-delay="0.8">
+                        <img src="https://via.placeholder.com/300x200" alt="Improved Product Development">
+                        <h3>Improved Product Development</h3>
+                        <p>Use insights to create products that meet market demands.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-card" data-animate="fadeInUp" data-delay="1.0">
+                        <img src="https://via.placeholder.com/300x200" alt="More About Marketing">
+                        <h3>More About Marketing</h3>
+                        <p>Explore our comprehensive marketing solutions for maximum ROI.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-choose-us-section">
+        <div class="container">
+            <h2>Why Choose Us?</h2>
+            <p>Data ProDocs INC upholds its reputation due to its outstanding commitment to promises. Our experienced data scientists work closely with clients to provide exceptional service.</p>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="stat-card" data-animate="fadeIn">
+                        <img src="https://via.placeholder.com/150x150" alt="B2B Marketers">
+                        <h3>27%</h3>
+                        <p>of B2B marketers in the US have used our data solutions.</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stat-card" data-animate="fadeIn" data-delay="0.2">
+                        <img src="https://via.placeholder.com/150x150" alt="B2B Contacts">
+                        <h3>50M</h3>
+                        <p>B2B contacts in our robust and accurate database.</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stat-card" data-animate="fadeIn" data-delay="0.4">
+                        <img src="https://via.placeholder.com/150x150" alt="Customers Served">
+                        <h3>2.4K</h3>
+                        <p>Customers trust us with their database requirements.</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stat-card" data-animate="fadeIn" data-delay="0.6">
+                        <img src="https://via.placeholder.com/150x150" alt="Customer Retention">
+                        <h3>40%</h3>
+                        <p>Customer retention due to our commitment to quality.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process-section">
+        <div class="container">
+            <h2>A Proven Process for Revenue Impact</h2>
+            <p>At its core, our methodology is a very human process; it’s our team working with your team to deeply understand your needs and then provide targeted solutions that dramatically improve your revenue performance.</p>
+            <a href="#contact" class="btn btn-primary">Learn More</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Data ProDocs INC. All rights reserved.</p>
+            <p><a href="#contact">Contact Us</a> | <a href="#services">Our Services</a></p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+
+    <!-- GSAP Animations -->
+    <script>
+        // Initialize GSAP animations
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Animate hero section
+        gsap.from(".hero-section h1", {
+            opacity: 0,
+            y: 50,
+            duration: 1,
+            ease: "power2.out"
+        });
+
+        gsap.from(".hero-section p", {
+            opacity: 0,
+            y: 50,
+            duration: 1,
+            delay: 0.2,
+            ease: "power2.out"
+        });
+
+        gsap.from(".hero-section .btn", {
+            opacity: 0,
+            y: 50,
+            duration: 1,
+            delay: 0.4,
+            ease: "power2.out"
+        });
+
+        // Animate service cards
+        document.querySelectorAll('.service-card').forEach((card, index) => {
+            gsap.from(card, {
+                opacity: 0,
+                y: 50,
+                duration: 1,
+                delay: card.dataset.delay || index * 0.2,
+                scrollTrigger: {
+                    trigger: card,
+                    start: "top 80%",
+                    toggleActions: "play none none none"
+                }
+            });
+        });
+
+        // Animate stat cards
+        document.querySelectorAll('.stat-card').forEach((card, index) => {
+            gsap.from(card, {
+                opacity: 0,
+                scale: 0.8,
+                duration: 1,
+                delay: card.dataset.delay || index * 0.2,
+                scrollTrigger: {
+                    trigger: card,
+                    start: "top 80%",
+                    toggleActions: "play none none none"
+                }
+            });
+        });
+
+        // Animate process section
+        gsap.from(".process-section h2", {
+            opacity: 0,
+            y: 50,
+            duration: 1,
+            scrollTrigger: {
+                trigger: ".process-section",
+                start: "top 80%",
+                toggleActions: "play none none none"
+            }
+        });
+
+        gsap.from(".process-section p", {
+            opacity: 0,
+            y: 50,
+            duration: 1,
+            delay: 0.2,
+            scrollTrigger: {
+                trigger: ".process-section",
+                start: "top 80%",
+                toggleActions: "play none none none"
+            }
+        });
+
+        gsap.from(".process-section .btn", {
+            opacity: 0,
+            y: 50,
+            duration: 1,
+            delay: 0.4,
+            scrollTrigger: {
+                trigger: ".process-section",
+                start: "top 80%",
+                toggleActions: "play none none none"
+            }
+        });
+    </script>
+</body>
+</html>
